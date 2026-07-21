@@ -1,0 +1,2273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Training">
+<meta name="theme-color" content="#f4f6fa">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAJvElEQVR4nO3dfYwcdR3H8e/395uZfbq7tthytEcrPlBa1F5pCjShUFohKKYJRIxEFFJjMJJgJUSjUTERYqMSo8WnABolQapSA4lGbYtVaEQsTYsF0seAbY8+XB/uYXdvd2fm9/WPbZu72/vubmHcPcjnlfurO72523nv7Px+MzvH0x9eSQATMe3+AWDyQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhygQhyg8ppczjAbnqCkWJyIJPojQWIsG2Ye948iEotr5r83FYdlU4xKI1Gl9qEOP5OyfpMrg5ZhZhIZKOdrN41nbGeQJSGhBq/qxnEYNgPlfO+M9y8+/xIhYRpT4qaD2w4OH+sKsuhj8jDMlTgSopvfd820dCfR6W0mIsR8pHBiw4EXU9a3xtTf6zeIw7I5WRr67Ac+9sOr7057Qe0CR4unPr3h/i1v7JwS5NDHZMDMoYsD6z9+wzeum714wmV+v3fz5575nmGfqd7eo94BqTVmqFJY+d6rfr783rQXhC6Oxn6FLurOTlt/4/3zps0ZiSq1b2/QFmEc/ur6r103e3Hkoqhmq0Uu/sTFy9cuW50PizzRceRZ9R4TISdy94KPE1HkYt9Yb+yXb7wwjrqC3Kr5N+bDoq27JmgBw6ZQKS3unv/Rd18Zudgznlez1ayxTtzt826YO3V2KSob/SXdYHMaZt94VD3AmQgzC0na89/KrwQJEpKU9YlowtElEfGZhwLr1z8mbXxA6hod0zJxPPa4hom1Hp04DHzfNMNmwqdViNyoA74mJxcaLtY4jmaOI0YvY9hU4rAYlWr+qzBxR5C1zA5TI+fOsCmEIxUXjRswCklgvJyfcUkPCJqdBGuSYc5Xij0dM5bMvHTc4MUwl+Pw7wd3lKJK2gvQR/OqY4rhSnHJzEvndHZX4vDsu7yIBNZ/fejwv4/syvnpZNebZByGzVC5sLRnwU+W3zMrN92RG9W4EBGzeeHIq3du+n7/yEDK+A3fsOA05lJYvm/JHXctuMmyEaKzT2x15ily0Y+2P/ndbU90BdkEV5tYHEwcxtEFufPWXrt6RmbK8ZEBY8YfEMXils760Jqln1+1YU1S633Hs2wGy4Xb5l1/76JPHiueciLjBgciYth89fLb9gwcemr/cwmOGZP7RszFqLxwxsU9HdMHK0XfepbNuC/f2BMjg4u7L5mZe1fteydoHMmKOYvKUcURecaOe1Y9Yx25MI5WzF4Ui0vwSU1yZoKJInFOXL2hM5vIRThXd65CF7E+ycjEzBy6KNmVJjxtxaPeDvVlsMM4Z808aYk/sZjTBBXiABXiABXiAFXCM6TninF4Wld7h3Vti8Ow8YwtxWWHM3G6lPUt23atvT1xWDaFcGS4UuzpmJGybd57TWaH8v2xc4a5LTvYNmwYw+ZUefiK7vlfWHDT8p7LOoMsEeEisloitPXYrvX7/vHjHU/G4lrfR6vjMGwKYWnle656aNmXMhNdlAqjXduz8NqehXM6uyMXtX7f0dI4mDhy8dSg45EPf4WJIhfbmpNzMFr1woYvL7r16MjJgXKhxRditnrPISS+8USEmDzTtkOttwvLTEROJO0F+bDU4ku42/DCrV63iCFs80ybrp3DXh1UiANUiANUiANUiANU7Ykj8U9YvLM5kbacgWtDHEzsGevENbw/BBBRLM4wp6zf+j5aOglWnQHrLw5sPrj91rkrCDcGaqR6rfm2Y3sOjxy/elZvPhypc/F28mtv2ZqqRCiw/j3PPbR/sO/OD66ckZmKybA6ynH4bN9Lt2944FtLVgXWk1Ca+3xqMlp/VlYMc6efve9fv/zFK39admFvp58jGv9BHRAiEnr+yMu7Tx0shCOdQbb1B2ptOGUvJEIyLdUxWMn/ZvemWNyZT4PCeFkv3eGnKy5qy12T2nahTSwuMP60VCf2GXU4ce0aqlB7ryEVEicYsjRg2/fiwSQYqBAHqBAHqBAHqBKOQ6jxgXUzy8A4zQxYEh/UJBlHdXacqd5NtZ2IZVu9dxE0z7de/SsFnUiQ9CeAEvt2QhQYry9/PHSRJRO5uHYCIxY3JUj1FfoHynkPd7RtmpAcGDqa9oITpaEJX86Ri9Ne8Prw0WTXm1gcTlzWT+/o37t2x/qvX/GZUs3droXEsClHlQdeeGy4UsS99JvkRDr8zM/+8/Q1F/Ze3j2vFJXH3ZPaiWS91JY3dj768h87/EwxLCe16iR3RLG4Dj/z4LZ1/x068pGLrgxdPPb+pBy66Nev/uWfh1/pwl30m1Z9sz5VHv7Un79914KbL+q6oOLC0XcTDIy/f7Dvpy89la+MZP20UCmpVSc/Q5r10+v2/O2J3c/UPlT9PfH3Fc6VE5fxUkPlwjeff3TCj3QISc7PpD0/2ZNzycchIlOCnPooEcp4E5w4z3rTbKe+gDiRZK/2aBxHU4OoscMTbP7/BxGJmzsRJXUHjGeWafytGg8ZAttgZ+VEAuNjaDpJCInHlonrbP7qfW0bTijUi4OZI4k3Hthq2MQujsXVfMVCZJg3Htiasj5uZ952IpL1UjtP7u/L91s2oYtqt1rFRcy888Rr+wb70jao885QLw7n4ilBx4Pb1/1h/7OB9WvvSGzZ+sauefHxp1/b0hXkcE152wmJZ7yTpaE7Nq4ZrhR9M8F9pAPjHS6cWLXxOxUXmbo7D57+8Mo6K6vedN2RfLH3lmU9vUJkiOn0ZVtCRL/du/mxXX/t8jPYaUwels1AOX/Z+XNX994yPdNFxNWt5kiI5FC+/wfbf7dv4FDDCYUGcVD1bzGJDFYKRrm0dUoqhzeUycayKYSl0TMiZwlJ2gYZLxWJqz+2aWq0wkTnpdRBFMYmk1AsLuunczTxX2ARkrhRGdTkPAcmJ96O3vohIM5+gQpxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgApxgOp/+MLTbIpZfWQAAAAASUVORK5CYII=">
+<link rel="icon" type="image/png" sizes="192x192" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAAKvklEQVR4nO3de4xcZRnH8ed533NmdmZ3drvLtotALwi0XIxcSw1YDEURjBAwRkOCGqP4BwoJRk1EIQqigRgDKkSJlBhCCCKRENBiRW0U0HKJgC20olCEULtlu7e5ncv7+McRWGZmZ6b7zPTMyu+T+aPpmexOzvnumXPec+PRW88jgIUyaX8AWNwQEKggIFBBQKCCgEAFAYEKAgIVBAQqCAhUEBCoICBQQUCggoBABQGBCgICFQQEKggIVBAQqCAgUEFAoIKAQAUBgQoCAhUEBCoICFQQEKggIFBBQKCCgEAFAYEKAgIVBAQqCAhUEBCoICBQQUCggoBABQGBCgICFQQEKggIVBAQqCAgUEFAoIKAQAUBgQoCAhUEBCoICFQQEKggIFBBQKCCgEAFAYEKAgIVBAQqCAhUEBCoICBQQUCggoBABQGBCgICFQQEKl77b2Vi5gb/L0JC0rFPBAeQabREhUik3QXabkCWTejiIAqJ6a1amEjIt17GeLG4Nn8U9ALDLEKlsNpgkjE5m2lzgbYVkGfsZHV2JFs4asmhQvRmtMm/d5f2vVZ8fbivELu43Y8P6REij005CpjpuINW1UxiotmwvHPylSXZgXZWRK0D8ozdW5768Mq1N66/7Mglh9V9GnllZvzqv952x/O/Xdq3JBI01Os8NrNh+bCBpT/d8JUPHHpCzVQRmgmLP3n2/qv/cttgJt/6pzWfbNlMVWfPWn7yPedek/OyIlK/HbS8sOz2D35dhO7a+fBwthCjoR5mmCtxMJYfvv+j31s9vNyJ1GwGMdNgpv9rJ1804Pd9+c83D2UGXNPvshZ7YbG4Pi/7g/VfzHnZ0EX19TBx8mX5/fdf+q7+kcCFjbazoVcwm2JY+ebaT68eXh7EYcONaEcSufjS91545qEnzgQly80iaTaNiUMXjfYNrRo8WEg8Yxu+zbIRotHc0GEDS4M4bLyrBr1BRHzjHTdyuBOx8yxQQ5y889iRlVUXNF+gLdZATByJC+OIqdlPYSIhCV2Lt0EvEJLKPOueuZi5GoctF2jrjWimecZ/at/GNb/MsmHm+s14JhIR7PZ3lmFjGs1tIiIRJzJ3rK5lPYl2lvt+DCS2j4mIeSooRi7mtw0cJRPFsClk8kyMEciOMGyKYfmNFUbt3CbigUzON17zzeGF6XxATOSIymHlY0eesWH5SWH8tk1vEclY//H/PHfXjoctG2ts+4Oe0JBhMx0U1x187CdXn2nYCMmbXwXJFs+/Z8c3bntgslrMedmO//YurIHYlMLiVes+c8WJnwhdZOq+RB3Jp445+9SDj71iy4+M4GCcimUzFRQvPGL9zRuuyBp/7jBvwpFkrH/OqrUXb/rO3vJ0zst09gN0OCDDZjYsfWjFKZef8PHx0qRQMm5Uu45x4i4++uytu7ffvu03S7ID2B5aGCauxuGKwth1p10SO7c3mDJs6uY2Ry4+aemaK9de/KU/3Jjv9EqowyuAZNP95GVrkmOsnrGWjWVb8zJsqlFw6tgxThxht3+hDHMlrq4ZXn5QfqgSVX3jNZrbxjfedFA8fvSo/kwuFtfZ2d35bxAmDtrY/TPM1Tjs+G9/p0nG6py4FqM1bII47MbmZlc2QdocS8SQY0fUD6A0flt35ja2YUEFAYEKAgIVBAQqCAhUunIsbH8ZZtP0pBOoJyK9cO5DygEZZmaeDSrlKKgfsIYmMtYv+LnmZ3sdAKkFJESWTTUOq1Fw4tKjzl25zjM9sTrsfULCRE/u2fnY7r+PlybmOy/swEhtmVljpoPSWH7kFx/59hmHHJ/Wx1jUXp7Z89U//XjX7J4U10PpBJQc7lhZGPv1+TectGy1E+dwUsd+MswrCsvuPOdbG7c/MBuU0tqITCcgw2a6Wjp31fvyNhuLs2xM+puDi48T8Yz5wnvOf7U8blLaoU5t1cfM1ShwIqlvBi5ehllIKnE1xd2xNBceM7d5ci7MhynlERD89YMKAgIVBAQqCAhUEBCopBmQvP1ySViYdMdgUwtISLKezzTP1bjQHieuz3b4Uq/9ks5ItJBkjf/C5KvHDK/0jRe6yHKaRwQXo+SQqmHz3L6XCtl+b74L47ssnTWQEzeYzW/atfWiTddELvaNZ5jx2q+XZWPY3PH8Q5dt+WHBz6f1RZba0fjYueG+wr07Np9VnrzwiPXnrFznG++Nu/RBM8nlXU+O73jwxcfu3rH5zBWnsOG5l8QfSGmeguPE9WX6n977z0dee/barT/vhfPrFgUhYqZiWGEiz8tYTvMGFSmfwxWLy/vZnJeJcIfXtiV/Z0OZfstmX3Um3T3Z9E8CdCK4P/AC9MgdKTCQCCoICFQQEKggIFBBQKDSlYDa3LHEkdSOaHMmdmludyUgj23LjysiHo5/qSWP3mn9NhHLthtDtV24xR3zRGXaso3FCZGQ1LyIKHaxZ72JykzHf/s7ipB4bCars06cECV3E697USyxZ+xMUAxc5x9E0eGAYhcP+vl7/rHliT07DukfNcy+8bw5L994TLw0P/Li9Gsbtz3Y7/c51xMDYouRE8n7uaf27Lx7x+8PyY96xnpsa+a2ZVPw88x8099+Gcax6fT5M50fifaMLYblzz703WtP+/zasaNrHqAhRL6xT43vvOrRn70yOz7g53pkRHWREnE5L3vlo7dOB8ULjjgjeY7EW1OJPDYT1ZnrH79z88tPDGX6Oz63Ox+QE9fnZfaUJz+3+fqx/EjNDURFxBozXpp0JP2oR02IkuvCrn5s4y3P3Fd/p3rLZjoszQSlpJ6OX0TWlWNhTiRj/az1JyrTtfcZZxaRrM0wczce3fAOJCSGeEl2YDooiUjN4+OSv9hurHsSbQW0gG9NEREiP7ljS812G5P8bzp0hhDF4jy2DXazmIhqn43U9jhLa+087onrn3fRUP11yhjpOZDan9vJMwJb/rR2blvQIiBmDlwYusiJEDc+502IRBwRl6MWT7eD1DGREylHQfLUtvnWDMmGVDGstH7iQJNpQpKx/u7S67c8e59hjp2LXNzoFSUn526f2JX3srjTT4+zzDc9fQ8RWTahi+oXaOgi33jbJ166/1+PDGX746bjLK0euuvi4WzhusfvuPmZX/nG84ytf/nGu/eFLZdvuWkwk9qp3dCmWNxgpn/Trq2XPHxDJHHDZeobb9vrL13wwDeqcWDZNP9m5NFbz2v+K5O9qGJYPu/w008ZW+Pm3Bw0WdE9t2/XvS/80Tcenh63WBg2U9XZtWNHn//u0+cuseRSob3lqTt3/m4mKOW8bMs95dYB0RuPTZ0OSkGj5+v4xhvM9BM2mRcVy6YYVkpRpX6SYTOYyXvtPSKz3d14ERnK9DfcRsYTdBej5HKGgUyu8VTn2hyl24+BxFgcVjH/T5yIE+3lDDihDFQQEKggIFBBQKCCgEAFAYEKAgIVBAQqCAhUEBCoICBQQUCggoBABQGBCgICFQQEKggIVBAQqCAgUEFAoIKAQAUBgQoCAhUEBCoICFQQEKggIFBBQKCCgEAFAYEKAgIVBAQqCAhUEBCoICBQQUCggoBABQGBCgICFQQEKggIVBAQqCAgUEFAoIKAQAUBgQoCAhUEBCoICFQQEKggIFBBQKCCgEAFAYEKAgIVBAQqCAhUEBCoICBQQUCggoBABQGBCgICFQQEKv8FNOAI1xzMKpUAAAAASUVORK5CYII=">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAACUUlEQVR4nO2VPWhUQRSFz73zfneTXV1WIoKxMAhqI6RQRNAiIAohhYVgpfYWYpEioKlTCWKTFBZChCA2goIB0SIQUEQLIUhIJKAxsMbs233v7b6fuRYbQ9ZYvCSkEPYrZoqBe86cmTtD5fFB7CW8p9U7Ah2B/0PAaE2KGIAWEcguKxLAxABS0esCIrIW1QXIm46tTBFprW0XJmaiKE2qUQ2gLtNlIhaIYn544fbUpdGSXfjhr3pRsDPvtShY8X/lDHvy4t1HA8OOYWkRI9V6v1u4eeIyET2eezXQ2x8mzRdfZ1uhZYRAsSRDR88dcIoL3vKVvvMAxj48WaguGwAEUo38vOke23d49OyNJW/l+eKMFwWKKEtS9Gcc7r92qtw3MjtRbfquaWsRbD5kRSyQ1dCrNuune07aymSiLPYFIKAeh/U4WI08LWKw2gjAaPNCpEUf6iq/HBrLGM5mlsNKqjWjzdbfQQuEkMn4Vgi89Za37UBEmPi7X7n15r6rbMoWUYtaFNzpv3q8dES3a6wLpKJT0UxUdotB3Jheeu/HDUWUvesIdO/M9ZJVYOJEpxudZAAgooKVY+L5tW8jMxP1uGGx6Tg2Mnc1EcU6efDp2cFc6XNlsWjnATCRAIYirjX9p/Nvy27xY2V+6strx7S7TDeVNLN7QECgybnpMIl6u3uml9410uhn6FmsqDw+KCJB0gTgGNZungpFTERRmoRJAyDXsBTxekTdVg6AiCR6O8bbSUVDoIi6rTwALVo2DlnvyPI/EUA2Vfv/P5yOQEdg9/wG7W0A6qVb5UAAAAAASUVORK5CYII=">
+<title>Training App</title>
+<style>
+  html,body{margin:0;padding:0;background:#f4f6fa;height:100%;overscroll-behavior:none;}
+  #root{height:100%;}*{-webkit-tap-highlight-color:transparent;}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { useState, useEffect, useRef } = React;
+
+const C = {
+  bg:"#f4f6fa", surface:"#ffffff", card:"#ffffff", border:"#e2e6ee",
+  muted:"#dee2ea", dim:"#707687", mid:"#454b59", text:"#20232c",
+  white:"#ffffff", ink:"#14161f", accent:"#149a4d", warn:"#c9711a", red:"#d33a3a",
+  green:"#1f9d4d", blue:"#2f6fed",
+};
+
+// day types
+const TYPE_GYM    = "gym";
+const TYPE_CARDIO = "cardio";
+
+// cardio templates
+const CARDIO_TEMPLATES = [
+  { name:"Easy Run",          calcPace:true,  fields:[{id:"distance",label:"Distance",placeholder:"e.g. 6"},{id:"duration",label:"Time (mins)",placeholder:"e.g. 35"},{id:"pace",label:"Avg Pace",placeholder:"Auto-calculated",readonly:true}] },
+  { name:"Tempo Run",         calcPace:false, fields:[{id:"intervals",label:"Intervals",placeholder:"e.g. 4x800m"},{id:"pace",label:"Pace",placeholder:"e.g. 4:30/km"},{id:"rest",label:"Rest",placeholder:"e.g. 90s between"},{id:"warmup",label:"Warm-up",placeholder:"e.g. 1km easy"},{id:"cooldown",label:"Cool-down",placeholder:"e.g. 1km easy"}] },
+  { name:"Interval Session",  calcPace:false, fields:[{id:"intervals",label:"Intervals",placeholder:"e.g. 8x400m"},{id:"effort",label:"Effort",placeholder:"e.g. 95% max"},{id:"rest",label:"Rest",placeholder:"e.g. 2 mins"},{id:"warmup",label:"Warm-up",placeholder:"e.g. 5 mins easy"}] },
+  { name:"Long Run",          calcPace:true,  fields:[{id:"distance",label:"Distance",placeholder:"e.g. 12"},{id:"duration",label:"Time (mins)",placeholder:"e.g. 65"},{id:"pace",label:"Avg Pace",placeholder:"Auto-calculated",readonly:true}] },
+  { name:"Ski Erg Intervals", calcPace:false, fields:[{id:"rounds",label:"Rounds",placeholder:"e.g. 8"},{id:"work",label:"Work",placeholder:"e.g. 45 sec"},{id:"rest",label:"Rest",placeholder:"e.g. 30 sec"},{id:"effort",label:"Effort",placeholder:"e.g. 85-90%"}] },
+  { name:"Hybrid Circuit",    calcPace:false, fields:[{id:"rounds",label:"Rounds",placeholder:"e.g. 4"},{id:"exercises",label:"Exercises",placeholder:"e.g. Row 1min / Ski 1min / Bike 1min"},{id:"rest",label:"Rest between rounds",placeholder:"e.g. 60 sec"}] },
+  { name:"Custom",            calcPace:false, fields:[{id:"description",label:"Description",placeholder:"Describe the session..."},{id:"duration",label:"Duration",placeholder:"e.g. 45 mins"}] },
+];
+
+// ── Pace helpers ──────────────────────────────────────────────────────────────
+function calcPaceStr(distStr, durMins, unit) {
+  const dist = parseFloat(distStr), mins = parseFloat(durMins);
+  if (!dist || !mins || dist <= 0 || mins <= 0) return "";
+  const d = unit === "mi" ? dist * 0.621371 : dist;
+  const p = mins / d;
+  const m = Math.floor(p), s = Math.round((p - m) * 60);
+  return m + ":" + s.toString().padStart(2,"0") + " / " + (unit==="mi"?"mi":"km");
+}
+function calcSpeedStr(distStr, durMins, unit) {
+  const dist = parseFloat(distStr), mins = parseFloat(durMins);
+  if (!dist || !mins || dist <= 0 || mins <= 0) return "";
+  const d = unit === "mi" ? dist * 0.621371 : dist;
+  return (d / (mins / 60)).toFixed(1) + " " + (unit==="mi"?"mph":"km/h");
+}
+
+const DEFAULT_PROGRAMME = [
+  { id:"chest",     tag:"DAY 1", name:"Chest & Triceps",    type:TYPE_GYM, exercises:[
+    {id:"bench",    name:"Barbell Bench Press",      sets:4,reps:"6–8",  note:"Heavy, add weight weekly"},
+    {id:"inclinedb",name:"Incline DB Bench (45°)",   sets:4,reps:"8–10", note:"Upper chest priority"},
+    {id:"cablefly", name:"Cable Chest Fly",          sets:3,reps:"12–15",note:"Stretch at bottom, squeeze at top"},
+    {id:"dips",     name:"Dips (weighted)",          sets:3,reps:"8–10", note:"Lean forward for chest"},
+    {id:"skull",    name:"Skull Crushers",           sets:3,reps:"10–12",note:""},
+    {id:"pushdown", name:"Tricep Cable Pushdown",    sets:3,reps:"12–15",note:"Superset with skull crushers"},
+  ]},
+  { id:"back",      tag:"DAY 2", name:"Back & Biceps",       type:TYPE_GYM, exercises:[
+    {id:"wpullup",  name:"Weighted Pull-ups",        sets:4,reps:"6–8",  note:"Add weight when easy"},
+    {id:"bbrow",    name:"Barbell Row",              sets:4,reps:"8",    note:"Heavy, drive elbows back"},
+    {id:"sarow",    name:"Single Arm DB Row",        sets:3,reps:"10 ea",note:"Full stretch at bottom"},
+    {id:"cablerow", name:"Cable Row (close grip)",   sets:3,reps:"10–12",note:"Squeeze hard at end range"},
+    {id:"facepull", name:"Face Pulls",               sets:3,reps:"15",   note:"Rear delts — don't skip"},
+    {id:"bbcurl",   name:"Barbell Curl",             sets:3,reps:"10",   note:""},
+    {id:"hammer",   name:"Hammer Curl",              sets:3,reps:"12",   note:"Superset with barbell curl"},
+  ]},
+  { id:"legs",      tag:"DAY 3", name:"Legs (Knee-Friendly)",type:TYPE_GYM, exercises:[
+    {id:"slegext",  name:"Single Leg Extension",    sets:4,reps:"12 ea",note:"Slow eccentric, squeeze at top"},
+    {id:"hamcurl",  name:"Prone Hamstring Curl",    sets:4,reps:"10–12",note:"3-sec eccentric"},
+    {id:"rdl",      name:"Romanian Deadlift (DB)",  sets:3,reps:"10",   note:"Light-moderate, hinge well"},
+    {id:"calfraise",name:"Standing Calf Raise",     sets:4,reps:"15–20",note:"Pause at top and bottom"},
+    {id:"deadbug",  name:"Dead Bug",                sets:3,reps:"10 ea",note:""},
+    {id:"pallof",   name:"Pallof Press",            sets:3,reps:"10 ea",note:""},
+  ]},
+  { id:"shoulders", tag:"DAY 4", name:"Shoulders & Arms",    type:TYPE_GYM, exercises:[
+    {id:"dbpress",  name:"Seated DB Shoulder Press",sets:4,reps:"8–10", note:""},
+    {id:"lateral",  name:"Lateral Raise",           sets:4,reps:"12–15",note:"Light, slow, controlled burn"},
+    {id:"reardelt", name:"Rear Delt Fly",           sets:3,reps:"12–15",note:""},
+    {id:"shrug",    name:"DB Shrug",                sets:3,reps:"12",   note:""},
+    {id:"inclcurl", name:"Incline DB Curl",         sets:3,reps:"10–12",note:"Long head stretch"},
+    {id:"concurl",  name:"Concentration Curl",      sets:3,reps:"12",   note:""},
+    {id:"ohtri",    name:"Overhead Tricep Extension",sets:3,reps:"10–12",note:""},
+  ]},
+];
+
+function seedExerciseLibrary(){
+  const names=new Set();
+  DEFAULT_PROGRAMME.forEach(d=>(d.exercises||[]).forEach(e=>names.add(e.name)));
+  return[...names].sort();
+}
+
+const DEFAULT_PROTEIN_TARGET=165, DEFAULT_CALORIE_TARGET=2500;
+const QUICK_PRESETS=[
+  {name:"Boiled egg",protein:6,calories:70},{name:"Protein shake",protein:25,calories:130},
+  {name:"Skyr (250g)",protein:22,calories:150},{name:"Chicken breast (150g)",protein:38,calories:165},
+  {name:"Tuna tin",protein:30,calories:140},{name:"Greek yoghurt (200g)",protein:20,calories:120},
+  {name:"Rice (100g dry)",protein:7,calories:360},{name:"Pasta (100g dry)",protein:13,calories:370},
+  {name:"Salmon (150g)",protein:30,calories:225},{name:"Beef mince (150g)",protein:32,calories:270},
+  {name:"2 slices wholegrain",protein:8,calories:180},
+];
+
+// Curated common whole foods & drinks (per 100g/100ml) — used so everyday items like
+// "apple" or "banana" are always found, since branded-product databases are weak on fresh produce.
+const CORE_FOODS=[
+  {name:"Apple",protein100:0.3,calories100:52,serving:182},
+  {name:"Banana",protein100:1.1,calories100:89,serving:118},
+  {name:"Orange",protein100:0.9,calories100:47,serving:154},
+  {name:"Grapes",protein100:0.7,calories100:69,serving:100},
+  {name:"Strawberries",protein100:0.7,calories100:32,serving:100},
+  {name:"Blueberries",protein100:0.7,calories100:57,serving:100},
+  {name:"Watermelon",protein100:0.6,calories100:30,serving:100},
+  {name:"Pineapple",protein100:0.5,calories100:50,serving:100},
+  {name:"Mango",protein100:0.8,calories100:60,serving:100},
+  {name:"Pear",protein100:0.4,calories100:57,serving:178},
+  {name:"Avocado",protein100:2,calories100:160,serving:150},
+  {name:"Carrot",protein100:0.9,calories100:41,serving:61},
+  {name:"Cucumber",protein100:0.7,calories100:15,serving:100},
+  {name:"Tomato",protein100:0.9,calories100:18,serving:123},
+  {name:"Onion",protein100:1.1,calories100:40,serving:100},
+  {name:"Garlic",protein100:6.4,calories100:149,serving:3},
+  {name:"Mushroom",protein100:3.1,calories100:22,serving:100},
+  {name:"Bell pepper",protein100:1,calories100:31,serving:119},
+  {name:"Broccoli",protein100:2.8,calories100:34,serving:91},
+  {name:"Spinach",protein100:2.9,calories100:23,serving:30},
+  {name:"Potato (boiled)",protein100:1.9,calories100:87,serving:150},
+  {name:"Sweet potato (boiled)",protein100:1.6,calories100:76,serving:150},
+  {name:"Chicken breast (cooked)",protein100:31,calories100:165,serving:172},
+  {name:"Chicken thigh (cooked)",protein100:26,calories100:209,serving:120},
+  {name:"Turkey breast (cooked)",protein100:30,calories100:135,serving:120},
+  {name:"Beef mince (cooked)",protein100:26,calories100:215,serving:100},
+  {name:"Beef steak (cooked)",protein100:25,calories100:271,serving:100},
+  {name:"Pork chop (cooked)",protein100:25,calories100:231,serving:100},
+  {name:"Bacon (cooked)",protein100:37,calories100:541,serving:20},
+  {name:"Salmon (cooked)",protein100:22,calories100:208,serving:100},
+  {name:"Tuna (canned in water)",protein100:26,calories100:116,serving:100},
+  {name:"Cod (cooked)",protein100:23,calories100:105,serving:100},
+  {name:"Shrimp / prawns (cooked)",protein100:24,calories100:99,serving:100},
+  {name:"Egg (whole)",protein100:13,calories100:155,serving:50},
+  {name:"Egg white",protein100:11,calories100:52,serving:33},
+  {name:"Tofu",protein100:8,calories100:76,serving:100},
+  {name:"Lentils (cooked)",protein100:9,calories100:116,serving:100},
+  {name:"Chickpeas (cooked)",protein100:8.9,calories100:164,serving:100},
+  {name:"Black beans (cooked)",protein100:8.9,calories100:132,serving:100},
+  {name:"Quinoa (cooked)",protein100:4.4,calories100:120,serving:100},
+  {name:"White rice (cooked)",protein100:2.7,calories100:130,serving:158},
+  {name:"Brown rice (cooked)",protein100:2.6,calories100:112,serving:158},
+  {name:"Pasta (cooked)",protein100:5,calories100:131,serving:140},
+  {name:"Oats (dry)",protein100:17,calories100:389,serving:40},
+  {name:"White bread",protein100:9,calories100:265,serving:30},
+  {name:"Wholegrain bread",protein100:13,calories100:247,serving:30},
+  {name:"Bagel",protein100:10,calories100:250,serving:105},
+  {name:"Tortilla wrap",protein100:8,calories100:300,serving:50},
+  {name:"Croissant",protein100:8,calories100:406,serving:60},
+  {name:"Greek yoghurt (plain)",protein100:10,calories100:59,serving:170},
+  {name:"Cottage cheese",protein100:11,calories100:98,serving:100},
+  {name:"Milk (whole)",protein100:3.2,calories100:61,serving:100},
+  {name:"Milk (skimmed)",protein100:3.4,calories100:34,serving:100},
+  {name:"Cheddar cheese",protein100:25,calories100:402,serving:30},
+  {name:"Mozzarella",protein100:28,calories100:280,serving:30},
+  {name:"Butter",protein100:0.9,calories100:717,serving:14},
+  {name:"Olive oil",protein100:0,calories100:884,serving:14},
+  {name:"Almonds",protein100:21,calories100:579,serving:28},
+  {name:"Walnuts",protein100:15,calories100:654,serving:28},
+  {name:"Cashews",protein100:18,calories100:553,serving:28},
+  {name:"Peanut butter",protein100:25,calories100:588,serving:16},
+  {name:"Chia seeds",protein100:17,calories100:486,serving:15},
+  {name:"Hummus",protein100:8,calories100:166,serving:50},
+  {name:"Honey",protein100:0.3,calories100:304,serving:21},
+  {name:"Sugar (white)",protein100:0,calories100:387,serving:5},
+  {name:"Dark chocolate",protein100:7.8,calories100:546,serving:20},
+  {name:"Milk chocolate",protein100:7.6,calories100:535,serving:20},
+  {name:"Ice cream",protein100:3.5,calories100:207,serving:65},
+  {name:"French fries",protein100:3.4,calories100:312,serving:100},
+  {name:"Potato crisps",protein100:7,calories100:536,serving:30},
+  {name:"Pizza (cheese)",protein100:11,calories100:266,serving:100},
+  {name:"Protein powder (whey)",protein100:80,calories100:400,serving:30},
+  {name:"Protein bar",protein100:30,calories100:350,serving:60},
+  // drinks
+  {name:"Water",protein100:0,calories100:0,serving:250},
+  {name:"Black coffee",protein100:0.1,calories100:1,serving:240},
+  {name:"Latte (whole milk)",protein100:3.2,calories100:60,serving:240},
+  {name:"Cappuccino",protein100:2.8,calories100:50,serving:190},
+  {name:"Tea (black, no milk)",protein100:0,calories100:1,serving:240},
+  {name:"Orange juice",protein100:0.7,calories100:45,serving:250},
+  {name:"Apple juice",protein100:0.1,calories100:46,serving:250},
+  {name:"Coca-Cola",protein100:0,calories100:42,serving:330},
+  {name:"Diet Coke",protein100:0,calories100:0.3,serving:330},
+  {name:"Beer (lager)",protein100:0.5,calories100:43,serving:330},
+  {name:"Red wine",protein100:0.1,calories100:85,serving:150},
+  {name:"White wine",protein100:0.1,calories100:82,serving:150},
+  {name:"Spirits (e.g. vodka, whiskey)",protein100:0,calories100:250,serving:40},
+  {name:"Sports drink (e.g. Gatorade)",protein100:0,calories100:25,serving:330},
+  {name:"Energy drink",protein100:0,calories100:45,serving:250},
+  {name:"Coconut water",protein100:0.7,calories100:19,serving:250},
+  {name:"Almond milk (unsweetened)",protein100:0.6,calories100:17,serving:100},
+  {name:"Soy milk",protein100:3.3,calories100:33,serving:100},
+  {name:"Oat milk",protein100:1,calories100:47,serving:100},
+  {name:"Protein shake (ready-made)",protein100:6,calories100:60,serving:330},
+  {name:"Smoothie (fruit)",protein100:1,calories100:60,serving:250},
+];
+
+function searchCoreFoods(query){
+  const q=query.trim().toLowerCase();
+  if(!q)return[];
+  return CORE_FOODS.filter(f=>f.name.toLowerCase().includes(q)).map(f=>({...f,generic:true}));
+}
+
+function dateKey(d=new Date()){
+  const y=d.getFullYear(),m=String(d.getMonth()+1).padStart(2,"0"),day=String(d.getDate()).padStart(2,"0");
+  return `${y}-${m}-${day}`;
+}
+function parseDateKey(k){const[y,m,d]=k.split("-").map(Number);return new Date(y,m-1,d);}
+function fmtDate(iso){return parseDateKey(iso).toLocaleDateString("en-GB",{day:"numeric",month:"short"});}
+function fmtDuration(sec){
+  sec=parseFloat(sec);
+  if(!sec&&sec!==0)return"";
+  if(sec>=60)return`${Math.floor(sec/60)}:${String(Math.round(sec%60)).padStart(2,"0")}`;
+  return`${Math.round(sec)}s`;
+}
+function handleEnterNav(e){
+  if(e.key!=="Enter")return;
+  e.preventDefault();
+  const all=Array.from(document.querySelectorAll("[data-order]")).sort((a,b)=>Number(a.dataset.order)-Number(b.dataset.order));
+  const idx=all.indexOf(e.target);
+  if(idx>=0&&idx<all.length-1)all[idx+1].focus();
+  else e.target.blur();
+}
+function uid(){return Math.random().toString(36).slice(2,9);}
+function lsGet(k){try{const v=localStorage.getItem(k);return v?JSON.parse(v):null;}catch{return null;}}
+function lsSet(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch{}}
+
+// ── Week / period helpers (all local-time based — no UTC conversion, no off-by-one) ──
+function addDays(dateKeyStr,n){const d=parseDateKey(dateKeyStr);d.setDate(d.getDate()+n);return dateKey(d);}
+function getWeekStart(d=new Date()){
+  const dt=new Date(d);const day=dt.getDay();const diff=day===0?-6:1-day; // Monday as start of week
+  dt.setDate(dt.getDate()+diff);
+  return dateKey(dt);
+}
+function getISOWeekNumber(dateKeyStr){
+  const d=parseDateKey(dateKeyStr);
+  d.setHours(0,0,0,0);
+  d.setDate(d.getDate()+3-((d.getDay()+6)%7));
+  const week1=new Date(d.getFullYear(),0,4);
+  return 1+Math.round(((d-week1)/86400000-3+((week1.getDay()+6)%7))/7);
+}
+function fmtWeekRange(weekStart){
+  const end=addDays(weekStart,6);
+  const s=parseDateKey(weekStart),e=parseDateKey(end);
+  const sameMonth=s.getMonth()===e.getMonth();
+  const sFmt=s.toLocaleDateString("en-GB",{day:"numeric",month:sameMonth?undefined:"short"});
+  const eFmt=e.toLocaleDateString("en-GB",{day:"numeric",month:"short"});
+  return `${sFmt}–${eFmt}`;
+}
+function periodRange(period){
+  const today=dateKey();
+  const days={week:7,month:30,quarter:90,half:182,year:365}[period]||30;
+  return {start:addDays(today,-days+1),end:today};
+}
+function inRange(d,start,end){return d>=start&&d<=end;}
+function getMonthGridDays(year,month){
+  const first=new Date(year,month,1);
+  const firstDay=first.getDay();
+  const diff=firstDay===0?-6:1-firstDay;
+  const gridStart=new Date(year,month,1+diff);
+  return Array.from({length:42}).map((_,i)=>{
+    const d=new Date(gridStart);d.setDate(gridStart.getDate()+i);
+    return dateKey(d);
+  });
+}
+
+async function searchFoods(query){
+  const local=searchCoreFoods(query);
+  let remote=[];
+  try{
+    const r=await fetch(`https://world.openfoodfacts.org/cgi/search.pl?search_terms=${encodeURIComponent(query)}&search_simple=1&action=process&json=1&page_size=12&sort_by=unique_scans_n&fields=product_name,brands,nutriments,serving_size`);
+    const d=await r.json();
+    remote=(d.products||[]).filter(p=>p.product_name&&p.nutriments).map(p=>{
+      const n=p.nutriments;
+      return{name:p.product_name+(p.brands?` (${p.brands.split(",")[0].trim()})`:``),
+        protein100:parseFloat(n["proteins_100g"]||0),
+        calories100:parseFloat(n["energy-kcal_100g"]||(n["energy_100g"]?n["energy_100g"]/4.184:0)),
+        serving:parseFloat(p.serving_size)||100,generic:false};
+    }).filter(p=>p.calories100>0||p.protein100>0);
+  }catch{ /* offline or blocked — local results still work */ }
+  // Local common-food matches first (most reliable for fresh produce/drinks), then branded results
+  return[...local,...remote];
+}
+
+const CSS=`
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0;}
+input,textarea,button,select{font-family:'Inter',-apple-system,sans-serif;}
+input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;}
+input[type=number]{-moz-appearance:textfield;}
+::-webkit-scrollbar{display:none;}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@keyframes slideUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+.fu{animation:fadeUp 0.2s ease;}.su{animation:slideUp 0.22s ease;}
+`;
+
+// ── Root ──────────────────────────────────────────────────────────────────────
+function App(){
+  const [tab,setTab]=useState("train");
+  const [tabKeys,setTabKeys]=useState({train:0,food:0,weight:0,stats:0});
+  const [prog,setProg]=useState(()=>lsGet("prog")||DEFAULT_PROGRAMME);
+  const [wlogs,setWL]=useState(()=>lsGet("wlogs")||{});
+  const [flogs,setFL]=useState(()=>lsGet("flogs")||{});
+  const [bwlogs,setBW]=useState(()=>lsGet("bwlogs")||{});
+  const [unit,setUnit]=useState(()=>lsGet("unit")||"km");
+  const [proteinTarget,setProteinTarget]=useState(()=>lsGet("proteinTarget")||DEFAULT_PROTEIN_TARGET);
+  const [calorieTarget,setCalorieTarget]=useState(()=>lsGet("calorieTarget")||DEFAULT_CALORIE_TARGET);
+  const [favourites,setFavourites]=useState(()=>lsGet("favourites")||[]);
+  const [exerciseLibrary,setExerciseLibrary]=useState(()=>lsGet("exerciseLibrary")||seedExerciseLibrary());
+  const [showRPE,setShowRPE]=useState(()=>lsGet("showRPE")??false);
+
+  function saveProg(p){setProg(p);lsSet("prog",p);}
+  function toggleUnit(){const u=unit==="km"?"mi":"km";setUnit(u);lsSet("unit",u);}
+  function toggleShowRPE(){const v=!showRPE;setShowRPE(v);lsSet("showRPE",v);}
+  function saveWorkout(dayId,date,data,meta){
+    const k=`${dayId}__${date}`;const next={...wlogs,[k]:{dayId,date,data,...(meta||{})}};
+    setWL(next);lsSet("wlogs",next);
+  }
+  function deleteWorkout(dayId,date){
+    const k=`${dayId}__${date}`;
+    const next={...wlogs};delete next[k];
+    setWL(next);lsSet("wlogs",next);
+  }
+  function saveFood(date,meals){const next={...flogs,[date]:meals};setFL(next);lsSet("flogs",next);}
+  function saveBW(date,weight){const next={...bwlogs,[date]:weight};setBW(next);lsSet("bwlogs",next);}
+  function deleteBW(date){const next={...bwlogs};delete next[date];setBW(next);lsSet("bwlogs",next);}
+  function saveProteinTarget(v){setProteinTarget(v);lsSet("proteinTarget",v);}
+  function saveCalorieTarget(v){setCalorieTarget(v);lsSet("calorieTarget",v);}
+  function addFavourite(fav){const next=[...favourites,fav];setFavourites(next);lsSet("favourites",next);}
+  function removeFavourite(favId){const next=favourites.filter(f=>f.favId!==favId);setFavourites(next);lsSet("favourites",next);}
+  function addToExerciseLibrary(name){
+    const trimmed=name.trim();
+    if(!trimmed)return;
+    if(exerciseLibrary.some(n=>n.toLowerCase()===trimmed.toLowerCase()))return;
+    const next=[...exerciseLibrary,trimmed].sort();
+    setExerciseLibrary(next);lsSet("exerciseLibrary",next);
+  }
+  function goTab(id){setTab(id);setTabKeys(k=>({...k,[id]:k[id]+1}));}
+
+  return(
+    <div style={{background:C.bg,minHeight:"100vh",color:C.text,fontFamily:"'Inter',-apple-system,sans-serif",maxWidth:480,margin:"0 auto",paddingBottom:80,paddingTop:"env(safe-area-inset-top)"}}>
+      <style>{CSS}</style>
+      {tab==="train"&&<TrainTab key={`train-${tabKeys.train}`} prog={prog} saveProg={saveProg} wlogs={wlogs} saveWorkout={saveWorkout} deleteWorkout={deleteWorkout} unit={unit} toggleUnit={toggleUnit} favourites={favourites} addFavourite={addFavourite} removeFavourite={removeFavourite} exerciseLibrary={exerciseLibrary} addToExerciseLibrary={addToExerciseLibrary} showRPE={showRPE} toggleShowRPE={toggleShowRPE}/>}
+      {tab==="food" &&<FoodTab key={`food-${tabKeys.food}`} flogs={flogs} saveFood={saveFood} proteinTarget={proteinTarget} calorieTarget={calorieTarget} saveProteinTarget={saveProteinTarget} saveCalorieTarget={saveCalorieTarget}/>}
+      {tab==="weight"&&<WeightTab key={`weight-${tabKeys.weight}`} bwlogs={bwlogs} saveBW={saveBW} deleteBW={deleteBW}/>}
+      {tab==="stats"&&<StatsTab key={`stats-${tabKeys.stats}`} wlogs={wlogs} flogs={flogs} prog={prog} unit={unit} bwlogs={bwlogs} proteinTarget={proteinTarget}/>}
+      <nav style={{position:"fixed",bottom:0,left:"50%",transform:"translateX(-50%)",width:"100%",maxWidth:480,background:C.surface,borderTop:`1px solid ${C.border}`,display:"flex",paddingBottom:"env(safe-area-inset-bottom)"}}>
+        {[["train","WORKOUT","⬡"],["food","FOOD TRACKER","◎"],["weight","WEIGHT","⚖"],["stats","STATS","◈"]].map(([id,label,icon])=>(
+          <button key={id} onClick={()=>goTab(id)} style={{flex:1,background:"none",border:"none",color:tab===id?C.accent:C.dim,padding:"10px 2px 12px",cursor:"pointer",display:"flex",flexDirection:"column",alignItems:"center",gap:2,transition:"color 0.15s"}}>
+            <span style={{fontSize:20,lineHeight:1}}>{icon}</span>
+            <span style={{fontSize:10,letterSpacing:"0.03em",whiteSpace:"nowrap"}}>{label}</span>
+          </button>
+        ))}
+      </nav>
+    </div>
+  );
+}
+
+// ── TRAIN TAB ─────────────────────────────────────────────────────────────────
+function BackBar({onHome,label}){
+  return(
+    <button onClick={onHome} style={{display:"flex",alignItems:"center",gap:6,background:C.card,border:`1px solid ${C.border}`,borderRadius:20,color:C.mid,fontSize:14,fontWeight:600,padding:"10px 16px",cursor:"pointer",WebkitTapHighlightColor:"transparent"}}>
+      <span style={{fontSize:18,lineHeight:1}}>←</span>{label||"Home"}
+    </button>
+  );
+}
+
+function WeekNav({weekStart,onChange}){
+  const isCurrent=weekStart===getWeekStart();
+  const weekNum=getISOWeekNumber(weekStart);
+  const [showCal,setShowCal]=useState(false);
+  return(
+    <div style={{marginBottom:14}}>
+      <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",background:C.card,border:`1px solid ${C.border}`,borderRadius:10,padding:"8px 10px"}}>
+        <button onClick={()=>onChange(addDays(weekStart,-7))} style={{background:"none",border:"none",color:C.mid,fontSize:20,cursor:"pointer",padding:"4px 10px",lineHeight:1}}>‹</button>
+        <div onClick={()=>setShowCal(true)} style={{textAlign:"center",cursor:"pointer",padding:"2px 8px"}}>
+          <div style={{fontSize:14,fontWeight:700,color:isCurrent?C.accent:C.ink}}>Week {weekNum}{isCurrent?" · This week":""} ▾</div>
+          <div style={{fontSize:11,color:C.dim,marginTop:1}}>{fmtWeekRange(weekStart)}</div>
+        </div>
+        <button onClick={()=>onChange(addDays(weekStart,7))} style={{background:"none",border:"none",color:C.mid,fontSize:20,cursor:"pointer",padding:"4px 10px",lineHeight:1}}>›</button>
+      </div>
+      {!isCurrent&&(
+        <button onClick={()=>onChange(getWeekStart())}
+          style={{width:"100%",marginTop:6,background:"#e6f6ec",border:`1px solid ${C.accent}44`,borderRadius:8,color:C.accent,fontSize:13,fontWeight:700,padding:"8px",cursor:"pointer"}}>
+          ↺ Jump to this week
+        </button>
+      )}
+      {showCal&&(
+        <MonthCalendar
+          weekStart={weekStart}
+          onSelectDate={(d)=>{onChange(getWeekStart(parseDateKey(d)));setShowCal(false);}}
+          onClose={()=>setShowCal(false)}
+        />
+      )}
+    </div>
+  );
+}
+
+function MonthCalendar({weekStart,onSelectDate,onClose}){
+  const wsDate=parseDateKey(weekStart);
+  const [viewYear,setViewYear]=useState(wsDate.getFullYear());
+  const [viewMonth,setViewMonth]=useState(wsDate.getMonth());
+  const weekEnd=addDays(weekStart,6);
+  const today=dateKey();
+  const days=getMonthGridDays(viewYear,viewMonth);
+  const monthLabel=new Date(viewYear,viewMonth,1).toLocaleDateString("en-GB",{month:"long",year:"numeric"});
+
+  function prevMonth(){const m=viewMonth-1;if(m<0){setViewMonth(11);setViewYear(viewYear-1);}else setViewMonth(m);}
+  function nextMonth(){const m=viewMonth+1;if(m>11){setViewMonth(0);setViewYear(viewYear+1);}else setViewMonth(m);}
+
+  return(
+    <div style={{position:"fixed",inset:0,background:"rgba(0,0,0,0.4)",zIndex:100,display:"flex",alignItems:"flex-end"}} onClick={onClose}>
+      <div className="su" style={{background:C.surface,border:`1px solid ${C.border}`,borderRadius:"16px 16px 0 0",padding:"18px 18px 28px",width:"100%",maxWidth:480,margin:"0 auto"}}
+        onClick={e=>e.stopPropagation()}>
+        <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:14}}>
+          <button onClick={prevMonth} style={{background:"none",border:`1px solid ${C.border}`,borderRadius:8,color:C.mid,fontSize:18,padding:"6px 14px",cursor:"pointer"}}>‹</button>
+          <div style={{fontFamily:"'Poppins'",fontSize:17,fontWeight:700,color:C.ink}}>{monthLabel}</div>
+          <button onClick={nextMonth} style={{background:"none",border:`1px solid ${C.border}`,borderRadius:8,color:C.mid,fontSize:18,padding:"6px 14px",cursor:"pointer"}}>›</button>
+        </div>
+        <div style={{display:"grid",gridTemplateColumns:"repeat(7,1fr)",gap:4,marginBottom:4}}>
+          {["Mo","Tu","We","Th","Fr","Sa","Su"].map(d=>(
+            <div key={d} style={{textAlign:"center",fontSize:11,color:C.dim,fontWeight:600,padding:"4px 0"}}>{d}</div>
+          ))}
+        </div>
+        <div style={{display:"grid",gridTemplateColumns:"repeat(7,1fr)",gap:4}}>
+          {days.map(d=>{
+            const inMonth=parseDateKey(d).getMonth()===viewMonth;
+            const isToday=d===today;
+            const inSelectedWeek=inRange(d,weekStart,weekEnd);
+            return(
+              <button key={d} onClick={()=>onSelectDate(d)}
+                style={{
+                  aspectRatio:"1",display:"flex",alignItems:"center",justifyContent:"center",
+                  borderRadius:8,cursor:"pointer",fontSize:13,fontWeight:isToday?700:500,
+                  background:inSelectedWeek?C.accent:"none",
+                  color:!inMonth?C.muted:(inSelectedWeek?C.ink:(isToday?C.blue:C.text)),
+                  border:isToday&&!inSelectedWeek?`1px solid ${C.blue}`:"1px solid transparent",
+                }}>
+                {parseDateKey(d).getDate()}
+              </button>
+            );
+          })}
+        </div>
+        <div style={{marginTop:16}}><BackBar onHome={onClose} label="Close"/></div>
+      </div>
+    </div>
+  );
+}
+
+function TrainTab({prog,saveProg,wlogs,saveWorkout,deleteWorkout,unit,toggleUnit,favourites,addFavourite,removeFavourite,exerciseLibrary,addToExerciseLibrary,showRPE,toggleShowRPE}){
+  const [view,setView]=useState("home");
+  const [editReturn,setEditReturn]=useState("home");
+  const [weekStart,setWeekStart]=useState(()=>getWeekStart());
+  const [dayIdx,setDayIdx]=useState(0);
+  const [sData,setSData]=useState({});
+  const [sDate,setSDate]=useState(dateKey());
+  const [editingOriginalDate,setEditingOriginalDate]=useState(null);
+  const [note,setNote]=useState("");
+  const [saved,setSaved]=useState(false);
+  const [showAddDay,setShowAddDay]=useState(false);
+  const [copiedKey,setCopiedKey]=useState(null);
+  const [confirmDeleteId,setConfirmDeleteId]=useState(null);
+  const [viewLog,setViewLog]=useState(null);
+
+  function openDay(i,existingLog){
+    setDayIdx(i);
+    if(existingLog){
+      setViewLog(existingLog);
+      setView("detail");
+    }else{
+      setSData({});setNote("");setSaved(false);setEditingOriginalDate(null);
+      const isCurrentWeek=weekStart===getWeekStart();
+      setSDate(isCurrentWeek?dateKey():weekStart);
+      setView("session");
+    }
+  }
+  function editSession(existingLog){
+    setSaved(false);
+    setSData(existingLog.data?.sets||{});
+    setNote(existingLog.data?.note||"");
+    setSDate(existingLog.date);
+    setEditingOriginalDate(existingLog.date);
+    setView("session");
+  }
+  function startNewSession(){
+    setSData({});setNote("");setSaved(false);setEditingOriginalDate(null);
+    const isCurrentWeek=weekStart===getWeekStart();
+    setSDate(isCurrentWeek?dateKey():weekStart);
+    setView("session");
+  }
+  function copyToNextWeek(day,log){
+    const targetDate=addDays(log.date,7);
+    saveWorkout(day.id,targetDate,log.data);
+    const key=day.id+log.date;
+    setCopiedKey(key);
+    setTimeout(()=>setCopiedKey(k=>k===key?null:k),1800);
+  }
+  function openEdit(i){setDayIdx(i);setEditReturn("home");setView("edit");}
+  function openEditFromSession(){setEditReturn("session");setView("edit");}
+  function setSet(exId,si,f,v){setSData(p=>{const s=[...(p[exId]?.sets||[])];s[si]={...(s[si]||{}),[f]:v};return{...p,[exId]:{sets:s}};});}
+  function doSave(){
+    const isCardio=prog[dayIdx].type===TYPE_CARDIO;
+    let toSave=sData;
+    if(!isCardio){
+      // Snapshot each exercise's name at log time so editing the day's exercise
+      // list later never orphans historical data — Stats can always resolve it.
+      toSave={};
+      Object.entries(sData).forEach(([exId,val])=>{
+        const ex=prog[dayIdx].exercises.find(e=>e.id===exId);
+        toSave[exId]={...val,name:ex?ex.name:val.name,logType:ex?(ex.logType||"weight"):(val.logType||"weight")};
+      });
+    }
+    // If we're editing an existing session and the date's been changed, this is a
+    // move, not a duplicate — remove the old dated entry so it doesn't linger.
+    if(editingOriginalDate&&editingOriginalDate!==sDate){
+      deleteWorkout(prog[dayIdx].id,editingOriginalDate);
+    }
+    saveWorkout(prog[dayIdx].id,sDate,{sets:toSave,note},{dayName:prog[dayIdx].name,dayType:prog[dayIdx].type,dayTag:prog[dayIdx].tag,dayTemplate:prog[dayIdx].template});
+    setEditingOriginalDate(sDate);
+    setSaved(true);
+  }
+  function deleteDay(i){
+    const next=prog.filter((_,idx)=>idx!==i);
+    saveProg(next);
+    setView("home");
+  }
+  function addDay(newDay){
+    const dayWithWeek={...newDay,weekAdded:weekStart};
+    const newIndex=prog.length;
+    saveProg([...prog,dayWithWeek]);
+    setShowAddDay(false);
+    setDayIdx(newIndex);
+    if(newDay.type===TYPE_CARDIO){
+      setSData({});setNote("");setSaved(false);setEditingOriginalDate(null);
+      const isCurrentWeek=weekStart===getWeekStart();
+      setSDate(isCurrentWeek?dateKey():weekStart);
+      setView("session");
+    }else{
+      setEditReturn("home");
+      setView("edit");
+    }
+  }
+  function addDayFromFavourite(fav){
+    const tag=`DAY ${prog.length+1}`;
+    const newDay=fav.type===TYPE_GYM
+      ?{id:uid(),tag,name:fav.name,type:TYPE_GYM,exercises:fav.exercises.map(e=>({...e,id:uid()})),weekAdded:weekStart,scoped:true}
+      :{id:uid(),tag,name:fav.name,type:TYPE_CARDIO,template:fav.template,fields:fav.fields,weekAdded:weekStart,scoped:true};
+    saveProg([...prog,newDay]);
+    setShowAddDay(false);
+  }
+
+  const day=prog[dayIdx];
+
+  useEffect(()=>{
+    // Safety net: if the referenced day no longer exists (shouldn't normally happen), don't crash — go home.
+    if(!day&&view!=="home")setView("home");
+  },[day,view]);
+
+  if(!day&&view!=="home")return null;
+
+  if(view==="edit") return <EditDay day={day} dayIdx={dayIdx} prog={prog} saveProg={saveProg} onBack={()=>setView(editReturn)} onDelete={deleteDay} favourites={favourites} addFavourite={addFavourite} removeFavourite={removeFavourite} exerciseLibrary={exerciseLibrary} addToExerciseLibrary={addToExerciseLibrary}/>;
+
+  if(view==="detail"&&viewLog){
+    const isCardio=day.type===TYPE_CARDIO;
+    const tmpl=isCardio?(CARDIO_TEMPLATES.find(t=>t.name===day.template)||CARDIO_TEMPLATES[6]):null;
+    const exEntries=isCardio?[]:Object.entries(viewLog.data?.sets||{}).filter(([,d])=>d?.sets);
+    return(
+      <div className="fu">
+        <div style={{padding:"16px 18px 14px",borderBottom:`1px solid ${C.border}`}}>
+          <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:14}}>
+            <BackBar onHome={()=>setView("home")}/>
+            <button onClick={()=>editSession(viewLog)} style={{display:"flex",alignItems:"center",gap:5,background:C.accent,border:"none",borderRadius:20,color:C.ink,fontSize:13,fontWeight:700,padding:"10px 16px",cursor:"pointer"}}>
+              ✎ Edit
+            </button>
+          </div>
+          <div style={{fontSize:12,color:isCardio?C.blue:C.accent,letterSpacing:"0.1em",fontWeight:600}}>{day.tag} · {isCardio?"CARDIO":"GYM"}</div>
+          <div style={{fontFamily:"'Poppins',sans-serif",fontWeight:700,fontSize:24,lineHeight:1.1,marginTop:2,color:C.ink}}>{day.name}</div>
+          <div style={{fontSize:13,color:C.dim,marginTop:4}}>{fmtDate(viewLog.date)}</div>
+        </div>
+
+        <div style={{padding:"16px 18px"}}>
+          {isCardio?(
+            <div style={{display:"flex",flexDirection:"column",gap:8}}>
+              {(tmpl?.fields||[]).map(f=>{
+                const v=viewLog.data?.sets?.[f.id];
+                if(!v)return null;
+                return(
+                  <div key={f.id} style={{display:"flex",justifyContent:"space-between",alignItems:"center",background:C.card,border:`1px solid ${C.border}`,borderRadius:8,padding:"11px 14px"}}>
+                    <span style={{fontSize:13,color:C.dim}}>{f.label}</span>
+                    <span style={{fontSize:15,color:C.ink,fontWeight:600}}>{v}</span>
+                  </div>
+                );
+              })}
+              {!tmpl?.fields?.some(f=>viewLog.data?.sets?.[f.id])&&(
+                <div style={{fontSize:14,color:C.muted}}>No details recorded for this session</div>
+              )}
+            </div>
+          ):(
+            <div style={{display:"flex",flexDirection:"column",gap:10}}>
+              {exEntries.length===0&&<div style={{fontSize:14,color:C.muted}}>No sets recorded for this session</div>}
+              {exEntries.map(([exId,d])=>{
+                const logType=d.logType||"weight";
+                const setLabels=d.sets.map(s=>{
+                  if(logType==="weight")return s.w?`${s.w}kg${s.r?` × ${s.r}`:""}`:null;
+                  if(logType==="bodyweight")return s.r?`${s.r} reps`:null;
+                  return s.dur?fmtDuration(s.dur):null;
+                }).filter(Boolean);
+                return(
+                  <div key={exId} style={{background:C.card,border:`1px solid ${C.border}`,borderRadius:8,padding:"12px 14px"}}>
+                    <div style={{fontSize:15,color:C.ink,fontWeight:600,marginBottom:setLabels.length?7:0}}>{d.name||"Exercise"}</div>
+                    {setLabels.length>0&&(
+                      <div style={{display:"flex",flexWrap:"wrap",gap:6}}>
+                        {setLabels.map((s,si)=>(
+                          <span key={si} style={{fontSize:13,background:C.surface,border:`1px solid ${C.border}`,borderRadius:6,padding:"4px 9px",color:C.mid}}>{s}</span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          )}
+          {viewLog.data?.note&&(
+            <div style={{marginTop:10,background:C.card,border:`1px solid ${C.border}`,borderRadius:8,padding:"11px 14px"}}>
+              <div style={{fontSize:11,color:C.dim,letterSpacing:"0.08em",marginBottom:4,fontWeight:600}}>NOTES</div>
+              <div style={{fontSize:14,color:C.text}}>{viewLog.data.note}</div>
+            </div>
+          )}
+          <button onClick={startNewSession} style={{width:"100%",marginTop:18,background:"none",border:`1px solid ${C.border}`,borderRadius:8,color:C.dim,fontSize:13,fontWeight:600,padding:11,cursor:"pointer"}}>
+            + Log a new session for {day.name}
+          </button>
+          <div style={{height:24}}/>
+        </div>
+      </div>
+    );
+  }
+
+  if(view==="session"){
+    const isCardio=day.type===TYPE_CARDIO;
+    const prev=Object.values(wlogs).filter(l=>l.dayId===day.id&&l.date!==sDate).sort((a,b)=>b.date.localeCompare(a.date))[0];
+    let orderCounter=0;
+    const getOrder=()=>orderCounter++;
+    return(
+      <div className="fu">
+        <div style={{padding:"16px 18px 14px",borderBottom:`1px solid ${C.border}`}}>
+          <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:14}}>
+            <BackBar onHome={()=>setView("home")}/>
+            <button onClick={openEditFromSession} style={{display:"flex",alignItems:"center",gap:5,background:"none",border:`1px solid ${C.border}`,borderRadius:20,color:C.mid,fontSize:13,fontWeight:600,padding:"9px 14px",cursor:"pointer"}}>
+              ✎ Edit
+            </button>
+          </div>
+          <div style={{display:"flex",alignItems:"center",gap:12}}>
+            <div style={{flex:1}}>
+              <div style={{fontSize:12,color:isCardio?C.blue:C.accent,letterSpacing:"0.1em",fontWeight:600}}>{day.tag} · {isCardio?`CARDIO · ${unit.toUpperCase()}`:"GYM"}</div>
+              <div style={{fontFamily:"'Poppins',sans-serif",fontWeight:700,fontSize:24,lineHeight:1.1,marginTop:2,color:C.ink}}>{day.name}</div>
+            </div>
+            <input type="date" value={sDate} onChange={e=>{setSDate(e.target.value);setSaved(false);}}
+              style={{background:C.card,border:`1px solid ${C.border}`,color:C.mid,fontSize:13,borderRadius:6,padding:"6px 8px"}}/>
+          </div>
+        </div>
+
+        {/* Previous session summary */}
+        {prev&&(
+          <div style={{margin:"10px 18px 0",background:C.card,border:`1px solid ${C.border}`,borderRadius:8,padding:"8px 12px"}}>
+            <div style={{fontSize:12,color:C.dim,letterSpacing:"0.1em",marginBottom:4}}>LAST — {fmtDate(prev.date)}</div>
+            {isCardio?(
+              <div style={{fontSize:13,color:C.mid}}>{prev.data?.note||"No notes recorded"}</div>
+            ):(
+              <div style={{display:"flex",flexWrap:"wrap",gap:4}}>
+                {day.exercises.map(ex=>{
+                  const d=prev.data?.sets?.[ex.id];if(!d?.sets)return null;
+                  const logType=d.logType||ex.logType||"weight";
+                  const key=logType==="weight"?"w":logType==="bodyweight"?"r":"dur";
+                  const vals=d.sets.map(s=>parseFloat(s[key])).filter(Boolean);
+                  if(!vals.length)return null;
+                  const best=Math.max(...vals);
+                  const label=logType==="weight"?`${best}kg`:logType==="bodyweight"?`${best} reps`:fmtDuration(best);
+                  return <div key={ex.id} style={{fontSize:12,background:C.surface,borderRadius:4,padding:"2px 7px",color:C.mid}}>{ex.name.split(" ")[0]} {label}</div>;
+                })}
+              </div>
+            )}
+          </div>
+        )}
+
+        <div style={{padding:"0 18px"}}>
+          {isCardio?(
+            <CardioLogger day={day} sData={sData} setSData={setSData} unit={unit} getOrder={getOrder}/>
+          ):(
+            day.exercises.map(ex=>(
+              <ExLogger key={ex.id} ex={ex} data={sData[ex.id]} prev={prev?.data?.sets?.[ex.id]} setSet={(si,f,v)=>setSet(ex.id,si,f,v)} showRPE={showRPE} getOrder={getOrder}/>
+            ))
+          )}
+          <div style={{marginTop:14}}>
+            <div style={{fontSize:12,color:C.dim,letterSpacing:"0.1em",marginBottom:6,fontWeight:600}}>NOTES</div>
+            <textarea value={note} onChange={e=>setNote(e.target.value)} rows={2} placeholder="How did it feel? Any PBs?"
+              style={{width:"100%",background:C.card,border:`1px solid ${C.border}`,borderRadius:8,color:C.text,fontSize:14,padding:"10px 12px",resize:"none",outline:"none"}}/>
+          </div>
+          <button onClick={doSave} style={{width:"100%",marginTop:10,marginBottom:24,padding:14,background:saved?"#d3f3df":C.accent,color:saved?C.green:C.ink,border:"none",borderRadius:8,fontSize:14,fontWeight:600,letterSpacing:"0.06em",cursor:"pointer",transition:"all 0.2s"}}>
+            {saved?"✓ SAVED":"SAVE SESSION"}
+          </button>
+          <BackBar onHome={()=>setView("home")} label="Back to Home"/>
+          <div style={{height:24}}/>
+        </div>
+      </div>
+    );
+  }
+
+  // Home
+  const thisWeekStart=getWeekStart();
+  const thisWeekEnd=addDays(thisWeekStart,6);
+  const doneThisWeek=prog.filter(d=>Object.values(wlogs).some(l=>l.dayId===d.id&&inRange(l.date,thisWeekStart,thisWeekEnd))).length;
+  const totalDays=prog.length;
+  const weekPct=totalDays?Math.min(100,(doneThisWeek/totalDays)*100):0;
+  return(
+    <div className="fu">
+      <div style={{padding:"26px 18px 14px"}}>
+        <div style={{display:"flex",alignItems:"flex-start",justifyContent:"space-between"}}>
+          <div>
+            <div style={{fontSize:12,color:C.dim,letterSpacing:"0.15em"}}>PROGRAMME</div>
+            <div style={{fontFamily:"'Poppins',sans-serif",fontSize:36,letterSpacing:"0.01em",fontWeight:700,color:C.ink,lineHeight:1}}>Training</div>
+            <div style={{fontSize:13,color:C.dim,marginTop:4}}>{Object.keys(wlogs).length} sessions logged</div>
+          </div>
+          <div style={{display:"flex",flexDirection:"column",gap:6,marginTop:6}}>
+            <button onClick={toggleUnit} style={{background:C.card,border:`1px solid ${C.border}`,borderRadius:7,color:C.accent,fontSize:14,fontWeight:500,padding:"7px 12px",cursor:"pointer",letterSpacing:"0.08em",transition:"all 0.15s"}}>
+              {unit==="km"?"KM  →  MI":"MI  →  KM"}
+            </button>
+            <button onClick={toggleShowRPE} style={{background:showRPE?"#e6f6ec":C.card,border:`1px solid ${showRPE?C.accent:C.border}`,borderRadius:7,color:showRPE?C.accent:C.dim,fontSize:12,fontWeight:600,padding:"6px 12px",cursor:"pointer",letterSpacing:"0.06em"}}>
+              RPE: {showRPE?"ON":"OFF"}
+            </button>
+          </div>
+        </div>
+        {totalDays>0&&(
+          <div style={{marginTop:16,background:C.card,border:`1px solid ${C.border}`,borderRadius:10,padding:"12px 14px"}}>
+            <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline",marginBottom:7}}>
+              <span style={{fontSize:13,color:C.mid,fontWeight:600}}>This week</span>
+              <span style={{fontSize:13,color:doneThisWeek>=totalDays?C.accent:C.dim,fontWeight:700}}>{doneThisWeek}/{totalDays} sessions</span>
+            </div>
+            <div style={{background:C.muted,borderRadius:6,height:8,overflow:"hidden"}}>
+              <div style={{width:`${weekPct}%`,height:"100%",background:doneThisWeek>=totalDays?C.accent:C.blue,borderRadius:6,transition:"width 0.3s"}}/>
+            </div>
+          </div>
+        )}
+      </div>
+
+      <div style={{padding:"16px 18px 0"}}>
+        <WeekNav weekStart={weekStart} onChange={setWeekStart}/>
+      </div>
+
+      <div style={{padding:"0 18px",display:"flex",flexDirection:"column",gap:8}}>
+        {(()=>{
+          const isCurrentWeek=weekStart===getWeekStart();
+          const weekEnd=addDays(weekStart,6);
+          const rows=prog.map((d,i)=>{
+            const isCardio=d.type===TYPE_CARDIO;
+            const sessions=Object.values(wlogs).filter(l=>l.dayId===d.id);
+            const last=sessions.sort((a,b)=>b.date.localeCompare(a.date))[0];
+            const weekSessions=sessions.filter(l=>inRange(l.date,weekStart,weekEnd));
+            const weekLast=weekSessions.sort((a,b)=>b.date.localeCompare(a.date))[0];
+            return{d,i,isCardio,last,weekLast,tagColor:isCardio?C.blue:C.accent,matched:true};
+          });
+
+          // A day shows in a given week if it's a permanent/recurring programme day
+          // (not scoped), OR it was specifically added for this week, OR it actually
+          // has a session logged this week. Favourite-added one-off sessions are
+          // 'scoped', so they only appear in the week they were meant for.
+          const visible=rows.filter(r=>!r.d.scoped||r.d.weekAdded===weekStart||r.weekLast);
+
+          // Surface sessions logged this week against a day that no longer exists
+          // (e.g. it was since deleted) — Stats never loses these, so the weekly view shouldn't either.
+          const progIds=new Set(prog.map(d=>d.id));
+          const weekLogs=Object.values(wlogs).filter(l=>inRange(l.date,weekStart,weekEnd)&&!progIds.has(l.dayId));
+          const byDayId={};
+          weekLogs.forEach(l=>{if(!byDayId[l.dayId]||l.date>byDayId[l.dayId].date)byDayId[l.dayId]=l;});
+          const orphans=Object.values(byDayId).map(log=>{
+            const vals=Object.values(log.data?.sets||{});
+            const isCardio=log.dayType?log.dayType===TYPE_CARDIO:!vals.some(v=>v&&typeof v==="object"&&Array.isArray(v.sets));
+            const name=log.dayName||(isCardio?"Cardio session":"Workout")+" (deleted)";
+            return{log,isCardio,name,tagColor:isCardio?C.blue:C.accent};
+          });
+
+          if(visible.length===0&&orphans.length===0){
+            return(
+              <div style={{padding:"20px 4px",textAlign:"center",color:C.muted,fontSize:14}}>
+                Nothing logged this week
+              </div>
+            );
+          }
+          return[
+            ...visible.map(({d,i,isCardio,last,weekLast,tagColor})=>{
+            const copyKey=d.id+(weekLast?.date||"");
+            return(
+              <div key={d.id} style={{background:C.card,border:`1px solid ${C.border}`,borderRadius:10,overflow:"hidden",borderLeft:`3px solid ${tagColor}`}}>
+                <div style={{padding:"13px 14px",display:"flex",alignItems:"center",gap:10}}>
+                  <div style={{flex:1,cursor:"pointer"}} onClick={()=>openDay(i,weekLast)}>
+                    <div style={{display:"flex",alignItems:"center",gap:7,marginBottom:3}}>
+                      <span style={{fontSize:12,color:tagColor,letterSpacing:"0.15em"}}>{d.tag}</span>
+                      <span style={{fontSize:11,color:isCardio?C.blue:C.accent,background:isCardio?"#e8effe":"#e6f6ec",padding:"2px 7px",borderRadius:4,letterSpacing:"0.08em",fontWeight:600}}>{isCardio?"CARDIO":"GYM"}</span>
+                    </div>
+                    <div style={{fontSize:17,color:C.ink,fontWeight:600}}>{d.name}</div>
+                    <div style={{fontSize:13,marginTop:2,color:weekLast?C.green:C.dim}}>
+                      {weekLast?`✓ Logged ${fmtDate(weekLast.date)}`:"Not logged this week"}
+                      {!isCardio&&` · ${d.exercises.length} exercises`}
+                    </div>
+                    {!weekLast&&last&&isCurrentWeek&&<div style={{fontSize:11,color:C.muted,marginTop:1}}>Last done: {fmtDate(last.date)}</div>}
+                  </div>
+                  <div style={{display:"flex",alignItems:"center",gap:6}}>
+                    <button onClick={()=>openEdit(i)} style={{background:"none",border:`1px solid ${C.border}`,borderRadius:6,color:C.dim,fontSize:13,padding:"5px 9px",cursor:"pointer",fontWeight:600}}>EDIT</button>
+                    <button onClick={()=>setConfirmDeleteId(d.id)} style={{background:"none",border:`1px solid ${C.border}`,borderRadius:6,color:C.red,fontSize:16,padding:"5px 8px",cursor:"pointer",lineHeight:1}}>🗑</button>
+                    <span onClick={()=>openDay(i,weekLast)} style={{color:C.muted,fontSize:24,cursor:"pointer"}}>›</span>
+                  </div>
+                </div>
+                {confirmDeleteId===d.id&&(
+                  <div style={{margin:"0 14px 12px",background:"#fdeceb",border:`1px solid ${C.red}44`,borderRadius:8,padding:"10px 12px"}}>
+                    <div style={{fontSize:13,color:C.mid,marginBottom:8}}>Delete "{d.name}"? Logged sessions for it are kept in Stats.</div>
+                    <div style={{display:"flex",gap:7}}>
+                      <button onClick={()=>setConfirmDeleteId(null)} style={{flex:1,background:"none",border:`1px solid ${C.border}`,borderRadius:6,color:C.dim,fontSize:13,padding:"7px",cursor:"pointer"}}>Cancel</button>
+                      <button onClick={()=>{deleteDay(i);setConfirmDeleteId(null);}} style={{flex:1,background:C.red,border:"none",borderRadius:6,color:C.white,fontSize:13,fontWeight:600,padding:"7px",cursor:"pointer"}}>Delete</button>
+                    </div>
+                  </div>
+                )}
+                {weekLast&&(
+                  <div style={{padding:"0 14px 12px"}}>
+                    <button onClick={()=>copyToNextWeek(d,weekLast)}
+                      style={{background:copiedKey===copyKey?"#e6f6ec":"none",border:`1px solid ${copiedKey===copyKey?C.accent:C.border}`,borderRadius:6,color:copiedKey===copyKey?C.accent:C.dim,fontSize:12,padding:"6px 11px",cursor:"pointer",fontWeight:600}}>
+                      {copiedKey===copyKey?`✓ Copied to ${fmtDate(addDays(weekLast.date,7))}`:"⧉ Copy to next week"}
+                    </button>
+                  </div>
+                )}
+              </div>
+            );
+            }),
+            ...orphans.map(({log,isCardio,name,tagColor})=>(
+              <div key={"orphan-"+log.dayId} style={{background:C.card,border:`1px solid ${C.border}`,borderRadius:10,overflow:"hidden",borderLeft:`3px solid ${tagColor}`,opacity:0.85}}>
+                <div style={{padding:"13px 14px"}}>
+                  <div style={{display:"flex",alignItems:"center",gap:7,marginBottom:3}}>
+                    <span style={{fontSize:11,color:isCardio?C.blue:C.accent,background:isCardio?"#e8effe":"#e6f6ec",padding:"2px 7px",borderRadius:4,letterSpacing:"0.08em",fontWeight:600}}>{isCardio?"CARDIO":"GYM"}</span>
+                  </div>
+                  <div style={{fontSize:17,color:C.ink,fontWeight:600}}>{name}</div>
+                  <div style={{fontSize:13,marginTop:2,color:C.green}}>✓ Logged {fmtDate(log.date)}</div>
+                  <div style={{fontSize:11,color:C.muted,marginTop:3}}>No longer in your programme — full details in Stats</div>
+                </div>
+              </div>
+            )),
+          ];
+        })()}
+
+        {/* Add day button */}
+        <button onClick={()=>setShowAddDay(true)}
+          style={{padding:"13px",background:"none",border:`1px dashed ${C.border}`,borderRadius:10,color:C.dim,fontSize:14,cursor:"pointer",letterSpacing:"0.08em",marginTop:2}}>
+          + ADD DAY
+        </button>
+      </div>
+
+      {showAddDay&&<AddDayModal onAdd={addDay} onClose={()=>setShowAddDay(false)} dayCount={prog.length} favourites={favourites} onAddFavourite={addDayFromFavourite} removeFavourite={removeFavourite}/>}
+    </div>
+  );
+}
+
+// ── ADD DAY MODAL ─────────────────────────────────────────────────────────────
+function AddDayModal({onAdd,onClose,dayCount,favourites,onAddFavourite,removeFavourite}){
+  const [mode,setMode]=useState("new");
+  const [type,setType]=useState(TYPE_GYM);
+  const [name,setName]=useState("");
+  const [cardioTemplate,setCardioTemplate]=useState(0);
+
+  function confirm(){
+    if(!name.trim())return;
+    const tag=`DAY ${dayCount+1}`;
+    if(type===TYPE_GYM){
+      onAdd({id:uid(),tag,name:name.trim(),type:TYPE_GYM,exercises:[]});
+    } else {
+      const tmpl=CARDIO_TEMPLATES[cardioTemplate];
+      onAdd({id:uid(),tag,name:name.trim(),type:TYPE_CARDIO,template:tmpl.name,fields:tmpl.fields});
+    }
+  }
+
+  return(
+    <div style={{position:"fixed",inset:0,background:"rgba(0,0,0,0.8)",zIndex:100,display:"flex",alignItems:"flex-end"}} onClick={onClose}>
+      <div className="su" style={{background:C.surface,border:`1px solid ${C.border}`,borderRadius:"16px 16px 0 0",padding:"20px 18px 40px",width:"100%",maxWidth:480,margin:"0 auto",maxHeight:"85vh",overflowY:"auto"}}
+        onClick={e=>e.stopPropagation()}>
+        <div style={{fontSize:12,color:C.dim,letterSpacing:"0.15em",marginBottom:14}}>ADD NEW DAY</div>
+
+        {favourites.length>0&&(
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8,marginBottom:16}}>
+            {[["new","Create New"],["fav",`★ Favourites (${favourites.length})`]].map(([id,label])=>(
+              <button key={id} onClick={()=>setMode(id)}
+                style={{padding:"11px",background:mode===id?"#fff8ea":C.card,border:`1px solid ${mode===id?C.warn:C.border}`,borderRadius:8,color:mode===id?C.warn:C.dim,fontSize:13,fontWeight:600,cursor:"pointer"}}>
+                {label}
+              </button>
+            ))}
+          </div>
+        )}
+
+        {mode==="fav"?(
+          <div>
+            <div style={{display:"flex",flexDirection:"column",gap:8,marginBottom:16}}>
+              {favourites.map(f=>(
+                <div key={f.favId} style={{display:"flex",alignItems:"center",gap:10,background:C.card,border:`1px solid ${C.border}`,borderRadius:8,padding:"11px 12px"}}>
+                  <div style={{flex:1,cursor:"pointer"}} onClick={()=>onAddFavourite(f)}>
+                    <div style={{fontSize:15,color:C.ink,fontWeight:600}}>{f.name}</div>
+                    <div style={{fontSize:12,color:C.dim,marginTop:1}}>
+                      {f.type===TYPE_CARDIO?`Cardio · ${f.template}`:`Gym · ${f.exercises.length} exercises`}
+                    </div>
+                  </div>
+                  <button onClick={()=>onAddFavourite(f)} style={{background:C.accent,border:"none",borderRadius:6,color:C.ink,fontSize:12,fontWeight:700,padding:"7px 12px",cursor:"pointer"}}>ADD</button>
+                  <button onClick={()=>removeFavourite(f.favId)} style={{background:"none",border:"none",color:C.muted,fontSize:18,cursor:"pointer",lineHeight:1,padding:"0 2px"}}>×</button>
+                </div>
+              ))}
+            </div>
+            <button onClick={onClose} style={{width:"100%",background:"none",border:`1px solid ${C.border}`,borderRadius:8,color:C.dim,fontSize:14,padding:12,cursor:"pointer"}}>CANCEL</button>
+          </div>
+        ):(
+          <>
+        {/* Type selector */}
+        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8,marginBottom:16}}>
+          {[TYPE_GYM,TYPE_CARDIO].map(t=>(
+            <button key={t} onClick={()=>setType(t)}
+              style={{padding:"12px",background:type===t?(t===TYPE_CARDIO?"#e8effe":C.card):C.card,border:`1px solid ${type===t?(t===TYPE_CARDIO?C.blue:C.accent):C.border}`,borderRadius:8,color:type===t?(t===TYPE_CARDIO?C.blue:C.accent):C.dim,fontSize:14,cursor:"pointer",letterSpacing:"0.08em",transition:"all 0.15s"}}>
+              {t===TYPE_GYM?"⬡ GYM":"◈ CARDIO"}
+            </button>
+          ))}
+        </div>
+
+        {/* Name */}
+        <div style={{marginBottom:14}}>
+          <div style={{fontSize:12,color:C.dim,letterSpacing:"0.1em",marginBottom:6}}>SESSION NAME</div>
+          <input value={name} onChange={e=>setName(e.target.value)} placeholder={type===TYPE_GYM?"e.g. Upper Body":"e.g. Easy Run"}
+            style={{width:"100%",background:C.card,border:`1px solid ${C.border}`,borderRadius:8,color:C.text,fontSize:16,padding:"11px 12px",outline:"none"}}/>
+        </div>
+
+        {/* Cardio template picker */}
+        {type===TYPE_CARDIO&&(
+          <div style={{marginBottom:16}}>
+            <div style={{fontSize:12,color:C.dim,letterSpacing:"0.1em",marginBottom:8}}>SESSION TYPE</div>
+            <div style={{display:"flex",flexWrap:"wrap",gap:6}}>
+              {CARDIO_TEMPLATES.map((t,i)=>(
+                <button key={i} onClick={()=>setCardioTemplate(i)}
+                  style={{background:cardioTemplate===i?C.blue:C.card,color:cardioTemplate===i?C.white:C.dim,border:`1px solid ${cardioTemplate===i?C.blue:C.border}`,borderRadius:6,fontSize:13,padding:"6px 10px",cursor:"pointer",transition:"all 0.12s"}}>
+                  {t.name}
+                </button>
+              ))}
+            </div>
+            <div style={{marginTop:10,fontSize:13,color:C.dim,background:C.card,borderRadius:7,padding:"8px 10px"}}>
+              Fields: {CARDIO_TEMPLATES[cardioTemplate].fields.map(f=>f.label).join(", ")}
+            </div>
+          </div>
+        )}
+
+        <div style={{display:"flex",gap:8}}>
+          <button onClick={onClose} style={{flex:1,background:"none",border:`1px solid ${C.border}`,borderRadius:8,color:C.dim,fontSize:14,padding:12,cursor:"pointer"}}>CANCEL</button>
+          <button onClick={confirm} style={{flex:2,background:type===TYPE_CARDIO?C.blue:C.accent,border:"none",borderRadius:8,color:type===TYPE_CARDIO?C.white:C.ink,fontSize:14,fontWeight:500,padding:12,cursor:"pointer",letterSpacing:"0.08em"}}>
+            ADD DAY
+          </button>
+        </div>
+        </>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ── CARDIO LOGGER ─────────────────────────────────────────────────────────────
+function CardioLogger({day,sData,setSData,unit,getOrder}){
+  const tmpl=CARDIO_TEMPLATES.find(t=>t.name===day.template)||CARDIO_TEMPLATES[6];
+  const fields=day.fields||tmpl.fields;
+  const hasPaceCalc=tmpl.calcPace;
+
+  function upd(id,v){setSData(p=>({...p,[id]:v}));}
+
+  const distance=sData["distance"]||"";
+  const duration=sData["duration"]||"";
+  const autoPace=hasPaceCalc?calcPaceStr(distance,duration,unit):"";
+  const autoSpeed=hasPaceCalc?calcSpeedStr(distance,duration,unit):"";
+  const distUnit=unit==="mi"?"miles":"km";
+
+  return(
+    <div style={{paddingTop:14}}>
+      <div style={{fontSize:12,color:C.blue,letterSpacing:"0.12em",marginBottom:12}}>{day.template||"CARDIO SESSION"} · {unit==="mi"?"MILES":"KM"}</div>
+      {fields.map(f=>{
+        const isReadonlyPace=f.id==="pace"&&hasPaceCalc;
+        const displayVal=isReadonlyPace?autoPace:(sData[f.id]||"");
+        const lbl=f.id==="distance"?`Distance (${distUnit})`:f.label;
+        return(
+          <div key={f.id} style={{marginBottom:12}}>
+            <div style={{fontSize:12,color:C.dim,letterSpacing:"0.1em",marginBottom:5}}>{lbl.toUpperCase()}</div>
+            <input
+              value={displayVal}
+              onChange={isReadonlyPace?undefined:e=>upd(f.id,e.target.value)}
+              readOnly={isReadonlyPace}
+              data-order={!isReadonlyPace&&getOrder?getOrder():undefined} onKeyDown={isReadonlyPace?undefined:handleEnterNav} enterKeyHint="next"
+              placeholder={isReadonlyPace?(distance&&duration?"Calculating...":f.placeholder):f.placeholder}
+              style={{width:"100%",background:isReadonlyPace?C.surface:C.card,
+                border:`1px solid ${isReadonlyPace?(autoPace?C.accent+"55":C.border):(sData[f.id]?C.blue+"66":C.border)}`,
+                borderRadius:8,color:isReadonlyPace?(autoPace?C.accent:C.dim):C.text,
+                fontSize:16,padding:"10px 12px",outline:"none",transition:"border-color 0.15s",
+                cursor:isReadonlyPace?"default":"text"}}/>
+          </div>
+        );
+      })}
+      {hasPaceCalc&&autoPace&&(
+        <div style={{background:"#e6f7ea",border:`1px solid ${C.accent}33`,borderRadius:8,padding:"10px 14px",marginTop:4}}>
+          <div style={{fontSize:12,color:C.dim,letterSpacing:"0.1em",marginBottom:6}}>CALCULATED</div>
+          <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+            <div>
+              <div style={{fontFamily:"'Poppins',sans-serif",fontWeight:700,fontSize:28,color:C.accent,lineHeight:1}}>{autoPace}</div>
+              <div style={{fontSize:12,color:C.dim,marginTop:2}}>avg pace</div>
+            </div>
+            <div style={{textAlign:"right"}}>
+              <div style={{fontFamily:"'Poppins',sans-serif",fontWeight:700,fontSize:28,color:C.green,lineHeight:1}}>{autoSpeed}</div>
+              <div style={{fontSize:12,color:C.dim,marginTop:2}}>avg speed</div>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ── EDIT DAY ──────────────────────────────────────────────────────────────────
+function ExerciseAutocomplete({value,onChange,library,onAddToLibrary,placeholder}){
+  const [open,setOpen]=useState(false);
+  const trimmed=value.trim();
+  const matches=(trimmed?library.filter(n=>n.toLowerCase().includes(trimmed.toLowerCase())):library).slice(0,6);
+  const exactMatch=library.some(n=>n.toLowerCase()===trimmed.toLowerCase());
+
+  function select(name){onChange(name);onAddToLibrary(name);setOpen(false);}
+
+  return(
+    <div style={{position:"relative"}}>
+      <input type="text" value={value}
+        onChange={e=>{onChange(e.target.value);setOpen(true);}}
+        onFocus={()=>setOpen(true)}
+        onBlur={()=>{setOpen(false);if(trimmed)onAddToLibrary(trimmed);}}
+        placeholder={placeholder||"Exercise name"}
+        style={{background:C.surface,border:`1px solid ${C.border}`,borderRadius:6,color:C.text,fontSize:15,padding:"8px 10px",outline:"none",width:"100%"}}/>
+      {open&&(matches.length>0||(trimmed&&!exactMatch))&&(
+        <div style={{position:"absolute",top:"100%",left:0,right:0,zIndex:30,background:C.surface,border:`1px solid ${C.border}`,borderRadius:8,marginTop:4,maxHeight:190,overflowY:"auto",boxShadow:"0 6px 16px rgba(20,22,31,0.12)"}}>
+          {matches.map(m=>(
+            <div key={m} onMouseDown={e=>{e.preventDefault();select(m);}}
+              style={{padding:"9px 12px",fontSize:14,color:C.text,cursor:"pointer",borderBottom:`1px solid ${C.border}`}}>
+              {m}
+            </div>
+          ))}
+          {trimmed&&!exactMatch&&(
+            <div onMouseDown={e=>{e.preventDefault();select(trimmed);}}
+              style={{padding:"9px 12px",fontSize:13,color:C.accent,fontWeight:600,cursor:"pointer"}}>
+              + Add "{trimmed}" as new exercise
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function EditDay({day,dayIdx,prog,saveProg,onBack,onDelete,favourites,addFavourite,removeFavourite,exerciseLibrary,addToExerciseLibrary}){
+  const [draft,setDraft]=useState(JSON.parse(JSON.stringify(day)));
+  const [newEx,setNewEx]=useState({name:"",sets:3,reps:"",note:"",logType:"weight"});
+  const [addOpen,setAddOpen]=useState(false);
+  const [confirmReset,setConfirmReset]=useState(false);
+  const [confirmDelete,setConfirmDelete]=useState(false);
+  const [dragIdx,setDragIdx]=useState(null);
+  const [overIdx,setOverIdx]=useState(null);
+  const rowRefs=useRef([]);
+  const isCardio=draft.type===TYPE_CARDIO;
+  const existingFav=favourites.find(f=>f.sourceId===day.id);
+
+  function upd(f,v){setDraft(p=>({...p,[f]:v}));}
+  function updEx(i,f,v){const e=[...draft.exercises];e[i]={...e[i],[f]:v};setDraft(p=>({...p,exercises:e}));}
+  function commitSets(i,v){const n=Math.max(1,parseInt(v)||1);const e=[...draft.exercises];e[i]={...e[i],sets:n};setDraft(p=>({...p,exercises:e}));}
+  function removeEx(i){setDraft(p=>({...p,exercises:p.exercises.filter((_,idx)=>idx!==i)}));}
+  function moveEx(i,dir){const e=[...draft.exercises];const t=i+dir;if(t<0||t>=e.length)return;[e[i],e[t]]=[e[t],e[i]];setDraft(p=>({...p,exercises:e}));}
+  function startDrag(i,e){e.preventDefault();setDragIdx(i);setOverIdx(i);}
+  useEffect(()=>{
+    if(dragIdx==null)return;
+    function onMove(e){
+      const y=(e.touches?e.touches[0].clientY:e.clientY);
+      let closest=null,closestDist=Infinity;
+      rowRefs.current.forEach((el,idx)=>{
+        if(!el)return;
+        const rect=el.getBoundingClientRect();
+        const mid=rect.top+rect.height/2;
+        const dist=Math.abs(y-mid);
+        if(dist<closestDist){closestDist=dist;closest=idx;}
+      });
+      if(closest!=null)setOverIdx(closest);
+    }
+    function onUp(){
+      setDraft(p=>{
+        if(overIdx==null||overIdx===dragIdx)return p;
+        const arr=[...p.exercises];
+        const [moved]=arr.splice(dragIdx,1);
+        arr.splice(overIdx,0,moved);
+        return{...p,exercises:arr};
+      });
+      setDragIdx(null);setOverIdx(null);
+    }
+    window.addEventListener("pointermove",onMove);
+    window.addEventListener("pointerup",onUp);
+    window.addEventListener("touchmove",onMove,{passive:false});
+    window.addEventListener("touchend",onUp);
+    return()=>{
+      window.removeEventListener("pointermove",onMove);
+      window.removeEventListener("pointerup",onUp);
+      window.removeEventListener("touchmove",onMove);
+      window.removeEventListener("touchend",onUp);
+    };
+  },[dragIdx,overIdx]);
+  function addEx(){
+    if(!newEx.name.trim())return;
+    const name=newEx.name.trim();
+    const e=[...draft.exercises,{id:uid(),name,sets:Math.max(1,parseInt(newEx.sets)||3),reps:newEx.reps||"10",note:newEx.note,logType:newEx.logType||"weight"}];
+    setDraft(p=>({...p,exercises:e}));setNewEx({name:"",sets:3,reps:"",note:"",logType:"weight"});setAddOpen(false);
+    addToExerciseLibrary(name);
+  }
+  function changeTemplate(i){
+    const tmpl=CARDIO_TEMPLATES[i];
+    setDraft(p=>({...p,template:tmpl.name,fields:tmpl.fields}));
+  }
+  function save(){const next=[...prog];next[dayIdx]=draft;saveProg(next);onBack();}
+  function resetAll(){saveProg(DEFAULT_PROGRAMME);onBack();}
+  function toggleFavourite(){
+    if(existingFav){removeFavourite(existingFav.favId);return;}
+    const fav=draft.type===TYPE_GYM
+      ?{favId:uid(),sourceId:day.id,name:draft.name,type:TYPE_GYM,exercises:draft.exercises.map(e=>({...e}))}
+      :{favId:uid(),sourceId:day.id,name:draft.name,type:TYPE_CARDIO,template:draft.template,fields:draft.fields};
+    addFavourite(fav);
+  }
+
+  const inp=(val,onChange,placeholder,type="text",extra={})=>(
+    <input type={type} value={val} onChange={e=>onChange(e.target.value)} placeholder={placeholder}
+      style={{background:C.surface,border:`1px solid ${C.border}`,borderRadius:6,color:C.text,fontSize:15,padding:"8px 10px",outline:"none",width:"100%",...extra}}/>
+  );
+
+  return(
+    <div className="fu">
+      <div style={{padding:"16px 18px 14px",borderBottom:`1px solid ${C.border}`,position:"sticky",top:"env(safe-area-inset-top)",background:C.bg,zIndex:10}}>
+        <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:12}}>
+          <BackBar onHome={onBack}/>
+          <div style={{display:"flex",alignItems:"center",gap:8}}>
+            <button onClick={toggleFavourite} title={existingFav?"Remove from favourites":"Save as favourite"}
+              style={{background:existingFav?"#fff8ea":"none",border:`1px solid ${existingFav?C.warn:C.border}`,borderRadius:20,color:existingFav?C.warn:C.dim,fontSize:16,padding:"9px 12px",cursor:"pointer",lineHeight:1}}>
+              {existingFav?"★":"☆"}
+            </button>
+            <button onClick={save} style={{background:C.accent,border:"none",borderRadius:20,color:C.ink,fontSize:14,fontWeight:700,padding:"10px 18px",cursor:"pointer",letterSpacing:"0.04em"}}>SAVE</button>
+          </div>
+        </div>
+        <div style={{fontSize:12,color:C.warn,letterSpacing:"0.1em",fontWeight:600}}>EDITING · {isCardio?"CARDIO":"GYM"}</div>
+        <div style={{fontFamily:"'Poppins',sans-serif",fontWeight:700,fontSize:22,lineHeight:1.1,color:C.ink,marginTop:2}}>{draft.name}</div>
+      </div>
+
+      <div style={{padding:"14px 18px"}}>
+        {/* Name + tag */}
+        <div style={{display:"grid",gridTemplateColumns:"2fr 1fr",gap:8,marginBottom:16}}>
+          <div>
+            <div style={{fontSize:12,color:C.dim,letterSpacing:"0.1em",marginBottom:5}}>NAME</div>
+            {inp(draft.name,v=>upd("name",v),"Session name")}
+          </div>
+          <div>
+            <div style={{fontSize:12,color:C.dim,letterSpacing:"0.1em",marginBottom:5}}>TAG</div>
+            {inp(draft.tag,v=>upd("tag",v),"DAY 1")}
+          </div>
+        </div>
+
+        {/* Cardio template change */}
+        {isCardio&&(
+          <div style={{marginBottom:16}}>
+            <div style={{fontSize:12,color:C.dim,letterSpacing:"0.1em",marginBottom:8}}>SESSION TYPE</div>
+            <div style={{display:"flex",flexWrap:"wrap",gap:5}}>
+              {CARDIO_TEMPLATES.map((t,i)=>{
+                const active=draft.template===t.name;
+                return(
+                  <button key={i} onClick={()=>changeTemplate(i)}
+                    style={{background:active?C.blue:C.card,color:active?C.white:C.dim,border:`1px solid ${active?C.blue:C.border}`,borderRadius:6,fontSize:13,padding:"6px 10px",cursor:"pointer",transition:"all 0.12s"}}>
+                    {t.name}
+                  </button>
+                );
+              })}
+            </div>
+            <div style={{marginTop:8,fontSize:13,color:C.dim}}>Fields: {(draft.fields||[]).map(f=>f.label).join(", ")}</div>
+          </div>
+        )}
+
+        {/* Gym exercises */}
+        {!isCardio&&(
+          <>
+            <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline",marginBottom:8}}>
+              <div style={{fontSize:12,color:C.dim,letterSpacing:"0.1em"}}>EXERCISES</div>
+              <div style={{fontSize:11,color:C.muted}}>⠿ hold to reorder</div>
+            </div>
+            {draft.exercises.map((ex,i)=>(
+              <div key={ex.id||i} ref={el=>rowRefs.current[i]=el}
+                style={{background:dragIdx===i?"#f0f2f6":C.card,border:`1px solid ${overIdx===i&&dragIdx!=null&&dragIdx!==i?C.accent:C.border}`,borderRadius:8,padding:"12px",marginBottom:8,opacity:dragIdx===i?0.6:1,transition:"border-color 0.1s"}}>
+                <div style={{display:"flex",alignItems:"center",gap:6,marginBottom:8}}>
+                  <div onPointerDown={e=>startDrag(i,e)} onTouchStart={e=>startDrag(i,e)}
+                    style={{cursor:"grab",touchAction:"none",color:C.muted,fontSize:18,padding:"2px 6px",lineHeight:1,userSelect:"none"}}>⠿</div>
+                  <div style={{display:"flex",flexDirection:"column",gap:2}}>
+                    <button onClick={()=>moveEx(i,-1)} disabled={i===0}
+                      style={{background:"none",border:"none",color:i===0?C.muted:C.dim,fontSize:17,cursor:i===0?"default":"pointer",lineHeight:1,padding:"1px 4px"}}>▲</button>
+                    <button onClick={()=>moveEx(i,1)} disabled={i===draft.exercises.length-1}
+                      style={{background:"none",border:"none",color:i===draft.exercises.length-1?C.muted:C.dim,fontSize:17,cursor:i===draft.exercises.length-1?"default":"pointer",lineHeight:1,padding:"1px 4px"}}>▼</button>
+                  </div>
+                  <div style={{flex:1}}><ExerciseAutocomplete value={ex.name} onChange={v=>updEx(i,"name",v)} library={exerciseLibrary} onAddToLibrary={addToExerciseLibrary} placeholder="Exercise name"/></div>
+                  <button onClick={()=>removeEx(i)} style={{background:"none",border:"none",color:C.red,fontSize:22,cursor:"pointer",lineHeight:1,padding:"0 4px",flexShrink:0}}>×</button>
+                </div>
+                <div style={{display:"flex",gap:5,marginBottom:8}}>
+                  {[["weight","Weight"],["bodyweight","Bodyweight"],["time","Time"]].map(([v,label])=>{
+                    const active=(ex.logType||"weight")===v;
+                    return(
+                      <button key={v} onClick={()=>updEx(i,"logType",v)}
+                        style={{flex:1,background:active?"#e6f6ec":C.surface,border:`1px solid ${active?C.accent:C.border}`,borderRadius:6,color:active?C.accent:C.dim,fontSize:11,fontWeight:600,padding:"6px 4px",cursor:"pointer"}}>
+                        {label}
+                      </button>
+                    );
+                  })}
+                </div>
+                <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 2fr",gap:6}}>
+                  <div>
+                    <div style={{fontSize:11,color:C.dim,marginBottom:4}}>SETS</div>
+                    <input type="number" value={ex.sets} onChange={e=>updEx(i,"sets",e.target.value)} onBlur={e=>commitSets(i,e.target.value)} onFocus={e=>e.target.select()} min={1}
+                      style={{background:C.surface,border:`1px solid ${C.border}`,borderRadius:6,color:C.text,fontSize:16,padding:"7px",outline:"none",width:"100%",textAlign:"center"}}/>
+                  </div>
+                  <div>
+                    <div style={{fontSize:11,color:C.dim,marginBottom:4}}>{ex.logType==="time"?"TARGET TIME":"REPS"}</div>
+                    <input type="text" value={ex.reps} onChange={e=>updEx(i,"reps",e.target.value)} placeholder={ex.logType==="time"?"e.g. 30–60s":"e.g. 8–10"}
+                      style={{background:C.surface,border:`1px solid ${C.border}`,borderRadius:6,color:C.text,fontSize:16,padding:"7px",outline:"none",width:"100%",textAlign:"center"}}/>
+                  </div>
+                  <div>
+                    <div style={{fontSize:11,color:C.dim,marginBottom:4}}>NOTE</div>
+                    <input type="text" value={ex.note} onChange={e=>updEx(i,"note",e.target.value)} placeholder="Optional"
+                      style={{background:C.surface,border:`1px solid ${C.border}`,borderRadius:6,color:C.text,fontSize:14,padding:"7px 8px",outline:"none",width:"100%"}}/>
+                  </div>
+                </div>
+              </div>
+            ))}
+            {!addOpen?(
+              <button onClick={()=>setAddOpen(true)}
+                style={{width:"100%",padding:"11px",background:"none",border:`1px dashed ${C.border}`,borderRadius:8,color:C.dim,fontSize:14,cursor:"pointer",letterSpacing:"0.08em",marginTop:2}}>
+                + ADD EXERCISE
+              </button>
+            ):(
+              <div className="su" style={{background:C.card,border:`1px solid ${C.accent}44`,borderRadius:8,padding:12,marginTop:2}}>
+                <div style={{fontSize:12,color:C.accent,letterSpacing:"0.1em",marginBottom:10}}>NEW EXERCISE</div>
+                <div style={{display:"flex",flexDirection:"column",gap:7}}>
+                  <ExerciseAutocomplete value={newEx.name} onChange={v=>setNewEx(p=>({...p,name:v}))} library={exerciseLibrary} onAddToLibrary={addToExerciseLibrary} placeholder="Exercise name"/>
+                  <div style={{display:"flex",gap:5}}>
+                    {[["weight","Weight"],["bodyweight","Bodyweight"],["time","Time"]].map(([v,label])=>{
+                      const active=(newEx.logType||"weight")===v;
+                      return(
+                        <button key={v} onClick={()=>setNewEx(p=>({...p,logType:v}))}
+                          style={{flex:1,background:active?"#e6f6ec":C.surface,border:`1px solid ${active?C.accent:C.border}`,borderRadius:6,color:active?C.accent:C.dim,fontSize:11,fontWeight:600,padding:"6px 4px",cursor:"pointer"}}>
+                          {label}
+                        </button>
+                      );
+                    })}
+                  </div>
+                  <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:6}}>
+                    <div>
+                      <div style={{fontSize:11,color:C.dim,marginBottom:4}}>SETS</div>
+                      <input type="number" value={newEx.sets} onChange={e=>setNewEx(p=>({...p,sets:e.target.value}))} onFocus={e=>e.target.select()} min={1}
+                        style={{background:C.surface,border:`1px solid ${C.border}`,borderRadius:6,color:C.text,fontSize:16,padding:"8px",outline:"none",width:"100%",textAlign:"center"}}/>
+                    </div>
+                    <div>
+                      <div style={{fontSize:11,color:C.dim,marginBottom:4}}>{newEx.logType==="time"?"TARGET TIME":"REPS"}</div>
+                      <input type="text" value={newEx.reps} onChange={e=>setNewEx(p=>({...p,reps:e.target.value}))} placeholder={newEx.logType==="time"?"e.g. 30–60s":"e.g. 10–12"}
+                        style={{background:C.surface,border:`1px solid ${C.border}`,borderRadius:6,color:C.text,fontSize:16,padding:"8px",outline:"none",width:"100%",textAlign:"center"}}/>
+                    </div>
+                  </div>
+                  <input type="text" value={newEx.note} onChange={e=>setNewEx(p=>({...p,note:e.target.value}))} placeholder="Note (optional)"
+                    style={{background:C.surface,border:`1px solid ${C.border}`,borderRadius:6,color:C.text,fontSize:14,padding:"8px 10px",outline:"none"}}/>
+                  <div style={{display:"flex",gap:7}}>
+                    <button onClick={()=>setAddOpen(false)}
+                      style={{flex:1,background:"none",border:`1px solid ${C.border}`,borderRadius:7,color:C.dim,fontSize:14,padding:"10px",cursor:"pointer"}}>CANCEL</button>
+                    <button onClick={addEx}
+                      style={{flex:2,background:C.accent,border:"none",borderRadius:7,color:C.ink,fontSize:14,fontWeight:500,padding:"10px",cursor:"pointer",letterSpacing:"0.08em"}}>ADD</button>
+                  </div>
+                </div>
+              </div>
+            )}
+          </>
+        )}
+
+        {/* Delete day */}
+        <div style={{marginTop:24,paddingTop:16,borderTop:`1px solid ${C.border}`}}>
+          <div style={{fontSize:12,color:C.dim,letterSpacing:"0.1em",marginBottom:8,fontWeight:600}}>DANGER ZONE</div>
+          {!confirmDelete?(
+            <button onClick={()=>setConfirmDelete(true)}
+              style={{background:"none",border:`1px solid ${C.red}55`,borderRadius:7,color:C.red,fontSize:13,padding:"9px 14px",cursor:"pointer",letterSpacing:"0.04em",fontWeight:600}}>
+              Delete this day
+            </button>
+          ):(
+            <div style={{background:"#fdeceb",border:`1px solid ${C.red}44`,borderRadius:8,padding:"12px 14px"}}>
+              <div style={{fontSize:14,color:C.mid,marginBottom:10}}>This removes "{draft.name}" from your programme. Past logged sessions for it are kept in Stats.</div>
+              <div style={{display:"flex",gap:7}}>
+                <button onClick={()=>setConfirmDelete(false)} style={{flex:1,background:"none",border:`1px solid ${C.border}`,borderRadius:7,color:C.dim,fontSize:14,padding:"9px",cursor:"pointer"}}>CANCEL</button>
+                <button onClick={()=>onDelete(dayIdx)} style={{flex:1,background:C.red,border:"none",borderRadius:7,color:C.white,fontSize:14,fontWeight:600,padding:"9px",cursor:"pointer"}}>DELETE DAY</button>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Reset */}
+        <div style={{marginTop:20,paddingTop:16,borderTop:`1px solid ${C.border}`}}>
+          {!confirmReset?(
+            <button onClick={()=>setConfirmReset(true)}
+              style={{background:"none",border:`1px solid ${C.border}`,borderRadius:7,color:C.dim,fontSize:13,padding:"9px 14px",cursor:"pointer",letterSpacing:"0.08em"}}>
+              Reset all days to default
+            </button>
+          ):(
+            <div style={{background:"#fdeceb",border:`1px solid ${C.red}44`,borderRadius:8,padding:"12px 14px"}}>
+              <div style={{fontSize:14,color:C.mid,marginBottom:10}}>Resets ALL days to original programme. Logs are kept.</div>
+              <div style={{display:"flex",gap:7}}>
+                <button onClick={()=>setConfirmReset(false)} style={{flex:1,background:"none",border:`1px solid ${C.border}`,borderRadius:7,color:C.dim,fontSize:14,padding:"9px",cursor:"pointer"}}>CANCEL</button>
+                <button onClick={resetAll} style={{flex:1,background:C.red,border:"none",borderRadius:7,color:C.white,fontSize:14,padding:"9px",cursor:"pointer"}}>RESET</button>
+              </div>
+            </div>
+          )}
+        </div>
+        <div style={{marginTop:20}}><BackBar onHome={onBack} label="Back"/></div>
+        <div style={{height:20}}/>
+      </div>
+    </div>
+  );
+}
+
+// ── EX LOGGER ─────────────────────────────────────────────────────────────────
+const LOG_FIELDS={
+  weight:[{key:"w",label:"KG"},{key:"r",label:"REPS"}],
+  bodyweight:[{key:"r",label:"REPS"}],
+  time:[{key:"dur",label:"TIME (s)"}],
+};
+function ExLogger({ex,data,prev,setSet,showRPE,getOrder}){
+  const [open,setOpen]=useState(true);
+  const sets=data?.sets||[];
+  const logType=ex.logType||"weight";
+  const fields=showRPE?[...LOG_FIELDS[logType],{key:"rpe",label:"RPE"}]:LOG_FIELDS[logType];
+  const primaryKey=LOG_FIELDS[logType][0].key;
+  const hasPrev=prev?.sets?.some(s=>s?.[primaryKey]);
+  const cols=`24px repeat(${fields.length},1fr) 1fr`;
+
+  function prevLabel(ps){
+    if(!ps)return"—";
+    if(logType==="weight")return ps.w?`${ps.w}kg`:"—";
+    if(logType==="bodyweight")return ps.r?`${ps.r} reps`:"—";
+    return ps.dur?fmtDuration(ps.dur):"—";
+  }
+  function copySet(si){
+    const ps=prev?.sets?.[si];
+    if(!ps)return;
+    ["w","r","rpe","dur"].forEach(k=>{if(ps[k]!=null)setSet(si,k,ps[k]);});
+  }
+  function copyAll(){
+    Array.from({length:Math.max(0,parseInt(ex.sets)||0)}).forEach((_,si)=>copySet(si));
+  }
+  return(
+    <div style={{borderBottom:`1px solid ${C.border}`,paddingTop:13,paddingBottom:4}}>
+      <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:open?8:0}}>
+        <div onClick={()=>setOpen(o=>!o)} style={{cursor:"pointer",flex:1}}>
+          <div style={{fontSize:15,color:C.text}}>{ex.name}</div>
+          <div style={{fontSize:12,color:C.dim,marginTop:2}}>
+            {ex.sets} sets · {logType==="time"?"time":ex.reps}{logType==="bodyweight"?" · bodyweight":""}{ex.note?` · ${ex.note}`:""}
+          </div>
+        </div>
+        {open&&hasPrev&&(
+          <button onClick={copyAll} style={{background:"#e6f6ec",border:`1px solid ${C.accent}44`,borderRadius:6,color:C.accent,fontSize:11,fontWeight:600,padding:"5px 9px",cursor:"pointer",whiteSpace:"nowrap",marginRight:8}}>
+            ↺ Use last time
+          </button>
+        )}
+        <span onClick={()=>setOpen(o=>!o)} style={{color:C.muted,fontSize:16,transform:open?"rotate(90deg)":"none",transition:"0.15s",cursor:"pointer"}}>›</span>
+      </div>
+      {open&&(
+        <div>
+          <div style={{display:"grid",gridTemplateColumns:cols,gap:4,marginBottom:4}}>
+            {["",...fields.map(f=>f.label),"PREV"].map((h,i)=>(
+              <div key={i} style={{fontSize:11,color:C.muted,letterSpacing:"0.08em",textAlign:"center"}}>{h}</div>
+            ))}
+          </div>
+          {Array.from({length:Math.max(0,parseInt(ex.sets)||0)}).map((_,si)=>{
+            const ps=prev?.sets?.[si];const filled=sets[si]?.[primaryKey];
+            return(
+              <div key={si} style={{display:"grid",gridTemplateColumns:cols,gap:4,marginBottom:4,alignItems:"center"}}>
+                <div style={{fontSize:12,color:C.muted,textAlign:"center"}}>{si+1}</div>
+                {fields.map(f=>(
+                  <input key={f.key} type={f.key==="rpe"?"text":"number"} value={sets[si]?.[f.key]||""} placeholder="—"
+                    data-order={getOrder?getOrder():undefined} onKeyDown={handleEnterNav} enterKeyHint="next"
+                    onChange={e=>setSet(si,f.key,e.target.value)} onFocus={e=>e.target.select()}
+                    style={{background:C.surface,border:"1px solid",borderColor:filled?C.accent+"44":C.border,borderRadius:6,color:C.text,fontSize:16,padding:"8px 4px",textAlign:"center",outline:"none",width:"100%"}}/>
+                ))}
+                {ps&&ps[primaryKey]?(
+                  <button onClick={()=>copySet(si)} style={{background:C.surface,border:`1px solid ${C.border}`,borderRadius:6,color:C.blue,fontSize:13,padding:"8px 2px",cursor:"pointer",fontWeight:600}}>
+                    {prevLabel(ps)}
+                  </button>
+                ):(
+                  <div style={{fontSize:13,color:C.dim,textAlign:"center"}}>—</div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ── FOOD TAB ─────────────────────────────────────────────────────────────────
+function FoodTab({flogs,saveFood,proteinTarget,calorieTarget,saveProteinTarget,saveCalorieTarget}){
+  const today=dateKey();
+  const [weekStart,setWeekStart]=useState(()=>getWeekStart());
+  const [date,setDate]=useState(today);
+  const [meals,setMeals]=useState(flogs[today]||[]);
+  const [mode,setMode]=useState("search");
+  const [query,setQuery]=useState("");
+  const [results,setResults]=useState([]);
+  const [searching,setSrch]=useState(false);
+  const [noRes,setNoRes]=useState(false);
+  const [pending,setPending]=useState(null);
+  const [grams,setGrams]=useState("");
+  const [custom,setCustom]=useState({name:"",protein:"",calories:""});
+  const [editTargets,setEditTargets]=useState(false);
+  const [pTargetDraft,setPTargetDraft]=useState(String(proteinTarget));
+  const [cTargetDraft,setCTargetDraft]=useState(String(calorieTarget));
+  const timer=useRef(null);
+
+  function changeWeek(ws){setWeekStart(ws);setDate(ws);}
+  const weekDays=Array.from({length:7}).map((_,i)=>addDays(weekStart,i));
+
+  function openEditTargets(){setPTargetDraft(String(proteinTarget));setCTargetDraft(String(calorieTarget));setEditTargets(true);}
+  function saveTargets(){
+    const p=parseInt(pTargetDraft)||proteinTarget;const c=parseInt(cTargetDraft)||calorieTarget;
+    saveProteinTarget(p);saveCalorieTarget(c);setEditTargets(false);
+  }
+
+  useEffect(()=>{setMeals(flogs[date]||[]);},[date,flogs]);
+  useEffect(()=>{
+    if(mode!=="search")return;
+    if(!query.trim()){setResults([]);setNoRes(false);return;}
+    clearTimeout(timer.current);
+    timer.current=setTimeout(async()=>{
+      setSrch(true);setNoRes(false);
+      try{const r=await searchFoods(query);setResults(r);setNoRes(r.length===0);}
+      catch{setNoRes(true);}
+      setSrch(false);
+    },700);
+    return()=>clearTimeout(timer.current);
+  },[query,mode]);
+
+  function addMeal(item){const next=[...meals,{...item,id:Date.now()}];setMeals(next);saveFood(date,next);}
+  function removeMeal(id){const next=meals.filter(m=>m.id!==id);setMeals(next);saveFood(date,next);}
+  function selectResult(f){setPending(f);setGrams(String(Math.round(f.serving)||100));}
+  function confirmAdd(){
+    const g=parseFloat(grams)||100;
+    addMeal({name:`${pending.name} (${g}g)`,protein:Math.round(pending.protein100*g/100),calories:Math.round(pending.calories100*g/100)});
+    setPending(null);setGrams("");setQuery("");setResults([]);
+  }
+  function addCustom(){
+    if(!custom.name||!custom.protein)return;
+    addMeal({name:custom.name,protein:parseFloat(custom.protein)||0,calories:parseFloat(custom.calories)||0});
+    setCustom({name:"",protein:"",calories:""});
+  }
+
+  const totalP=meals.reduce((s,m)=>s+(m.protein||0),0);
+  const totalC=meals.reduce((s,m)=>s+(m.calories||0),0);
+  const pPct=Math.min(100,(totalP/proteinTarget)*100);
+  const cPct=Math.min(100,(totalC/calorieTarget)*100);
+
+  return(
+    <div className="fu">
+      <div style={{padding:"26px 18px 14px",borderBottom:`1px solid ${C.border}`}}>
+        <div style={{display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+          <div style={{fontSize:12,color:C.dim,letterSpacing:"0.15em"}}>DAILY TRACKER</div>
+          <button onClick={openEditTargets} style={{background:"none",border:`1px solid ${C.border}`,borderRadius:6,color:C.dim,fontSize:12,padding:"4px 9px",cursor:"pointer",fontWeight:600}}>Edit targets</button>
+        </div>
+        <div style={{fontFamily:"'Poppins',sans-serif",fontSize:36,fontWeight:700,color:C.ink,lineHeight:1}}>Nutrition</div>
+
+        <div style={{marginTop:14}}>
+          <WeekNav weekStart={weekStart} onChange={changeWeek}/>
+        </div>
+        <div style={{display:"flex",gap:5,marginBottom:14}}>
+          {weekDays.map(d=>{
+            const dayMeals=flogs[d]||[];
+            const dayP=dayMeals.reduce((s,m)=>s+(m.protein||0),0);
+            const hit=dayP>=proteinTarget;
+            const isSel=d===date;
+            const dObj=parseDateKey(d);
+            return(
+              <button key={d} onClick={()=>setDate(d)}
+                style={{flex:1,display:"flex",flexDirection:"column",alignItems:"center",gap:3,background:isSel?C.accent:C.card,border:`1px solid ${isSel?C.accent:C.border}`,borderRadius:8,padding:"7px 2px",cursor:"pointer"}}>
+                <span style={{fontSize:10,color:isSel?C.ink:C.dim,fontWeight:600}}>{dObj.toLocaleDateString("en-GB",{weekday:"short"}).slice(0,2)}</span>
+                <span style={{fontSize:14,color:isSel?C.ink:C.text,fontWeight:700}}>{dObj.getDate()}</span>
+                <span style={{width:5,height:5,borderRadius:"50%",background:dayMeals.length?(hit?(isSel?C.ink:C.green):(isSel?C.ink+"88":C.muted)):"transparent"}}/>
+              </button>
+            );
+          })}
+        </div>
+
+        {editTargets&&(
+          <div className="su" style={{background:C.card,border:`1px solid ${C.accent}44`,borderRadius:10,padding:12,marginBottom:14}}>
+            <div style={{fontSize:12,color:C.accent,letterSpacing:"0.1em",marginBottom:10,fontWeight:600}}>DAILY TARGETS</div>
+            <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8,marginBottom:10}}>
+              <div>
+                <div style={{fontSize:11,color:C.dim,marginBottom:4}}>PROTEIN (G)</div>
+                <input type="number" value={pTargetDraft} onChange={e=>setPTargetDraft(e.target.value)}
+                  style={{width:"100%",background:C.surface,border:`1px solid ${C.border}`,borderRadius:6,color:C.text,fontSize:14,padding:"8px 10px",outline:"none"}}/>
+              </div>
+              <div>
+                <div style={{fontSize:11,color:C.dim,marginBottom:4}}>CALORIES (KCAL)</div>
+                <input type="number" value={cTargetDraft} onChange={e=>setCTargetDraft(e.target.value)}
+                  style={{width:"100%",background:C.surface,border:`1px solid ${C.border}`,borderRadius:6,color:C.text,fontSize:14,padding:"8px 10px",outline:"none"}}/>
+              </div>
+            </div>
+            <div style={{display:"flex",gap:7}}>
+              <button onClick={()=>setEditTargets(false)} style={{flex:1,background:"none",border:`1px solid ${C.border}`,borderRadius:7,color:C.dim,fontSize:13,padding:"9px",cursor:"pointer"}}>CANCEL</button>
+              <button onClick={saveTargets} style={{flex:2,background:C.accent,border:"none",borderRadius:7,color:C.ink,fontSize:13,fontWeight:700,padding:"9px",cursor:"pointer"}}>SAVE</button>
+            </div>
+          </div>
+        )}
+
+        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10}}>
+          {[{label:"PROTEIN",val:Math.round(totalP),target:proteinTarget,unit:"g",pct:pPct,color:C.accent},
+            {label:"CALORIES",val:Math.round(totalC),target:calorieTarget,unit:"kcal",pct:cPct,color:C.warn}].map(({label,val,target,unit,pct,color})=>(
+            <div key={label} style={{background:C.card,border:`1px solid ${C.border}`,borderRadius:10,padding:"12px 14px"}}>
+              <div style={{fontSize:12,color:C.dim,letterSpacing:"0.1em",marginBottom:5}}>{label}</div>
+              <div style={{display:"flex",alignItems:"baseline",gap:4,marginBottom:7}}>
+                <span style={{fontFamily:"'Poppins'",fontSize:30,fontWeight:700,color:pct>=100?color:C.ink,lineHeight:1}}>{val}</span>
+                <span style={{fontSize:12,color:C.dim}}>/ {target}{unit}</span>
+              </div>
+              <div style={{height:3,background:C.muted,borderRadius:2}}>
+                <div style={{height:"100%",width:`${pct}%`,background:color,borderRadius:2,transition:"width 0.4s"}}/>
+              </div>
+              <div style={{fontSize:12,color:pct>=100?color:C.dim,marginTop:4}}>{pct>=100?"✓ TARGET HIT":`${target-val}${unit} to go`}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div style={{padding:"12px 18px 0"}}>
+        <div style={{fontSize:12,color:C.dim,letterSpacing:"0.1em",marginBottom:7}}>LOGGED</div>
+        {meals.length===0&&<div style={{fontSize:14,color:C.muted,paddingBottom:8}}>Nothing logged yet</div>}
+        {meals.map(m=>(
+          <div key={m.id} style={{display:"flex",alignItems:"center",padding:"8px 0",borderBottom:`1px solid ${C.border}`}}>
+            <div style={{flex:1}}>
+              <div style={{fontSize:15,color:C.text}}>{m.name}</div>
+              <div style={{fontSize:13,color:C.dim,marginTop:1}}>{m.protein}g protein · {m.calories} kcal</div>
+            </div>
+            <button onClick={()=>removeMeal(m.id)} style={{background:"none",border:"none",color:C.muted,fontSize:24,cursor:"pointer",lineHeight:1,padding:"0 4px"}}>×</button>
+          </div>
+        ))}
+      </div>
+
+      <div style={{padding:"14px 18px"}}>
+        <div style={{display:"flex",gap:5,marginBottom:12}}>
+          {[["search","SEARCH"],["quick","QUICK ADD"],["custom","CUSTOM"]].map(([m,l])=>(
+            <button key={m} onClick={()=>{setMode(m);setPending(null);setQuery("");setResults([]);}}
+              style={{flex:1,background:mode===m?C.accent:C.card,color:mode===m?C.ink:C.dim,border:`1px solid ${mode===m?C.accent:C.border}`,borderRadius:6,fontSize:12,padding:"7px 3px",cursor:"pointer",letterSpacing:"0.05em",transition:"all 0.15s"}}>
+              {l}
+            </button>
+          ))}
+        </div>
+
+        {mode==="search"&&!pending&&(
+          <div>
+            <div style={{position:"relative",marginBottom:9}}>
+              <input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Search any food or brand…"
+                style={{width:"100%",background:C.card,border:`1px solid ${C.border}`,borderRadius:8,color:C.text,fontSize:15,padding:"11px 12px 11px 34px",outline:"none"}}/>
+              <span style={{position:"absolute",left:10,top:"50%",transform:"translateY(-50%)",fontSize:18,color:C.dim}}>⌕</span>
+              {searching&&<div style={{position:"absolute",right:10,top:"50%",transform:"translateY(-50%)",width:14,height:14,border:`2px solid ${C.muted}`,borderTopColor:C.accent,borderRadius:"50%",animation:"spin 0.7s linear infinite"}}/>}
+            </div>
+            {noRes&&<div style={{fontSize:14,color:C.muted,marginBottom:8}}>No results — try different terms or use Custom</div>}
+            {!query&&<div style={{fontSize:13,color:C.dim}}>Type to search millions of foods</div>}
+            <div style={{maxHeight:260,overflowY:"auto",display:"flex",flexDirection:"column",gap:4}}>
+              {results.map((f,i)=>(
+                <button key={i} onClick={()=>selectResult(f)}
+                  style={{background:C.card,border:`1px solid ${C.border}`,borderRadius:7,padding:"10px 12px",textAlign:"left",cursor:"pointer"}}>
+                  <div style={{display:"flex",alignItems:"center",gap:6,marginBottom:2}}>
+                    <div style={{fontSize:15,color:C.text}}>{f.name.length>42?f.name.slice(0,42)+"…":f.name}</div>
+                    {f.generic&&<span style={{fontSize:10,color:C.accent,background:"#e6f6ec",padding:"1px 6px",borderRadius:4,fontWeight:600,letterSpacing:"0.04em"}}>COMMON</span>}
+                  </div>
+                  <div style={{fontSize:13,color:C.dim}}>per 100g: {Math.round(f.protein100)}g protein · {Math.round(f.calories100)} kcal</div>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {mode==="search"&&pending&&(
+          <div className="fu" style={{background:C.card,border:`1px solid ${C.accent}44`,borderRadius:10,padding:14}}>
+            <div style={{fontSize:15,color:C.text,marginBottom:3}}>{pending.name.length>42?pending.name.slice(0,42)+"…":pending.name}</div>
+            <div style={{fontSize:13,color:C.dim,marginBottom:12}}>per 100g: {Math.round(pending.protein100)}g protein · {Math.round(pending.calories100)} kcal</div>
+            <div style={{fontSize:12,color:C.dim,letterSpacing:"0.1em",marginBottom:7}}>HOW MUCH?</div>
+            <div style={{display:"flex",gap:6,flexWrap:"wrap",marginBottom:10}}>
+              {[50,75,100,150,200,250].map(g=>(
+                <button key={g} onClick={()=>setGrams(String(g))}
+                  style={{background:grams===String(g)?C.accent:C.surface,color:grams===String(g)?C.ink:C.dim,border:`1px solid ${grams===String(g)?C.accent:C.border}`,borderRadius:6,fontSize:14,padding:"6px 10px",cursor:"pointer",transition:"all 0.12s"}}>
+                  {g}g
+                </button>
+              ))}
+            </div>
+            <div style={{display:"flex",gap:8,alignItems:"center",marginBottom:12}}>
+              <input type="number" value={grams} onChange={e=>setGrams(e.target.value)} placeholder="grams"
+                style={{flex:1,background:C.surface,border:`1px solid ${C.border}`,borderRadius:8,color:C.text,fontSize:18,padding:"9px 12px",outline:"none",textAlign:"center"}}/>
+              <span style={{fontSize:14,color:C.dim}}>g</span>
+            </div>
+            {grams&&<div style={{fontSize:14,color:C.mid,marginBottom:12,textAlign:"center"}}>= {Math.round(pending.protein100*parseFloat(grams||0)/100)}g protein · {Math.round(pending.calories100*parseFloat(grams||0)/100)} kcal</div>}
+            <div style={{display:"flex",gap:8}}>
+              <button onClick={()=>{setPending(null);setGrams("");}} style={{flex:1,background:"none",border:`1px solid ${C.border}`,borderRadius:8,color:C.dim,fontSize:14,padding:11,cursor:"pointer"}}>BACK</button>
+              <button onClick={confirmAdd} style={{flex:2,background:C.accent,border:"none",borderRadius:8,color:C.ink,fontSize:14,fontWeight:500,padding:11,cursor:"pointer",letterSpacing:"0.08em"}}>ADD TO LOG</button>
+            </div>
+          </div>
+        )}
+
+        {mode==="quick"&&(
+          <div style={{display:"flex",flexDirection:"column",gap:5}}>
+            {QUICK_PRESETS.map(f=>(
+              <button key={f.name} onClick={()=>addMeal({...f,id:Date.now()})}
+                style={{background:C.card,border:`1px solid ${C.border}`,borderRadius:7,padding:"10px 12px",textAlign:"left",cursor:"pointer",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+                <span style={{fontSize:15,color:C.text}}>{f.name}</span>
+                <span style={{fontSize:13,color:C.dim}}>{f.protein}g · {f.calories}kcal</span>
+              </button>
+            ))}
+          </div>
+        )}
+
+        {mode==="custom"&&(
+          <div style={{display:"flex",flexDirection:"column",gap:8}}>
+            <div style={{fontSize:13,color:C.dim,marginBottom:2}}>Enter macros manually for home-cooked meals</div>
+            {[["name","Food name","text"],["protein","Protein (g)","number"],["calories","Calories (kcal)","number"]].map(([k,ph,t])=>(
+              <input key={k} type={t} value={custom[k]} onChange={e=>setCustom(p=>({...p,[k]:e.target.value}))} placeholder={ph}
+                style={{background:C.card,border:`1px solid ${C.border}`,borderRadius:8,color:C.text,fontSize:15,padding:"11px 12px",outline:"none"}}/>
+            ))}
+            <button onClick={addCustom} style={{background:C.accent,color:C.ink,border:"none",borderRadius:8,padding:12,fontSize:14,fontWeight:500,letterSpacing:"0.1em",cursor:"pointer"}}>ADD FOOD</button>
+          </div>
+        )}
+      </div>
+      <div style={{height:16}}/>
+    </div>
+  );
+}
+
+// ── WEIGHT TAB ────────────────────────────────────────────────────────────────
+function WeightTab({bwlogs,saveBW,deleteBW}){
+  const [date,setDate]=useState(dateKey());
+  const [w,setW]=useState(bwlogs[dateKey()]!=null?String(bwlogs[dateKey()]):"");
+  const [saved,setSaved]=useState(false);
+  const [confirmDelDate,setConfirmDelDate]=useState(null);
+  const [weekStart,setWeekStart]=useState(()=>getWeekStart());
+
+  useEffect(()=>{setW(bwlogs[date]!=null?String(bwlogs[date]):"");setSaved(false);},[date]);
+
+  const data=Object.entries(bwlogs||{}).map(([d,val])=>({date:d,w:parseFloat(val)})).filter(d=>!isNaN(d.w)).sort((a,b)=>a.date.localeCompare(b.date));
+  const latest=data[data.length-1];
+  const diff=data.length>1?data[data.length-1].w-data[0].w:0;
+  const weekEnd=addDays(weekStart,6);
+  const weekData=data.filter(d=>inRange(d.date,weekStart,weekEnd));
+
+  function log(){
+    if(w.trim()===""||!date)return;
+    saveBW(date,parseFloat(w));
+    setSaved(true);
+    setTimeout(()=>setSaved(false),1200);
+  }
+
+  return(
+    <div className="fu">
+      <div style={{padding:"26px 18px 14px",borderBottom:`1px solid ${C.border}`}}>
+        <div style={{fontSize:12,color:C.dim,letterSpacing:"0.15em"}}>TRACKER</div>
+        <div style={{fontFamily:"'Poppins',sans-serif",fontSize:36,fontWeight:700,color:C.ink,lineHeight:1}}>Bodyweight</div>
+      </div>
+
+      <div style={{padding:"16px 18px 0"}}>
+        <div style={{background:C.card,border:`1px solid ${C.border}`,borderRadius:10,padding:14}}>
+          <div style={{display:"flex",flexDirection:"column",gap:12}}>
+            <div>
+              <div style={{fontSize:12,color:C.dim,letterSpacing:"0.1em",marginBottom:6,fontWeight:600}}>DATE</div>
+              <input type="date" value={date} onChange={e=>setDate(e.target.value)}
+                style={{width:"100%",boxSizing:"border-box",background:C.surface,border:`1px solid ${C.border}`,borderRadius:8,color:C.text,fontSize:14,padding:"9px 10px",outline:"none"}}/>
+            </div>
+            <div>
+              <div style={{fontSize:12,color:C.dim,letterSpacing:"0.1em",marginBottom:6,fontWeight:600}}>WEIGHT (KG)</div>
+              <input type="number" value={w} onChange={e=>setW(e.target.value)} placeholder="e.g. 82.5"
+                style={{width:"100%",boxSizing:"border-box",background:C.surface,border:`1px solid ${C.border}`,borderRadius:8,color:C.text,fontSize:14,padding:"9px 10px",outline:"none"}}/>
+            </div>
+          </div>
+          <button onClick={log} style={{width:"100%",marginTop:10,padding:12,background:saved?"#d3f3df":C.accent,color:saved?C.green:C.ink,border:"none",borderRadius:8,fontSize:14,fontWeight:700,letterSpacing:"0.06em",cursor:"pointer"}}>
+            {saved?"✓ SAVED":"LOG WEIGHT"}
+          </button>
+        </div>
+      </div>
+
+      <div style={{padding:"18px 18px 0"}}>
+        <div style={{fontSize:12,color:C.dim,letterSpacing:"0.1em",marginBottom:10}}>TREND (ALL-TIME)</div>
+        {data.length===0?(
+          <div style={{fontSize:14,color:C.muted}}>Log your weight above to start seeing your trend here</div>
+        ):(()=>{
+          const maxW=Math.max(...data.map(d=>d.w));const minW=Math.min(...data.map(d=>d.w));
+          return(
+            <div style={{background:C.card,border:`1px solid ${C.border}`,borderRadius:10,padding:14}}>
+              <div style={{display:"flex",justifyContent:"space-between",marginBottom:14}}>
+                <div>
+                  <div style={{fontFamily:"'Poppins'",fontSize:32,fontWeight:700,color:C.ink,lineHeight:1}}>{latest.w}kg</div>
+                  <div style={{fontSize:12,color:C.dim,marginTop:2}}>latest logged</div>
+                </div>
+                {data.length>1&&(
+                  <div style={{textAlign:"right"}}>
+                    <div style={{fontFamily:"'Poppins'",fontWeight:700,fontSize:26,color:diff>0?C.red:(diff<0?C.green:C.dim),lineHeight:1}}>{diff>0?"+":""}{diff.toFixed(1)}kg</div>
+                    <div style={{fontSize:12,color:C.dim,marginTop:2}}>vs first logged</div>
+                  </div>
+                )}
+              </div>
+              <div style={{display:"flex",alignItems:"flex-end",gap:4,height:60}}>
+                {data.map((d,i)=>{
+                  const h=maxW===minW?40:8+((d.w-minW)/(maxW-minW))*52;const isLast=i===data.length-1;
+                  return(
+                    <div key={i} style={{flex:1,display:"flex",flexDirection:"column",alignItems:"center",gap:2}}>
+                      {isLast&&<div style={{fontSize:11,color:C.blue}}>{d.w}kg</div>}
+                      <div style={{width:"100%",height:h,background:isLast?C.blue:C.muted,borderRadius:"2px 2px 0 0"}}/>
+                    </div>
+                  );
+                })}
+              </div>
+              <div style={{display:"flex",justifyContent:"space-between",marginTop:6,fontSize:11,color:C.dim}}>
+                <span>{fmtDate(data[0].date)}</span><span>{fmtDate(data[data.length-1].date)}</span>
+              </div>
+            </div>
+          );
+        })()}
+      </div>
+
+      <div style={{padding:"18px 18px 24px"}}>
+        <div style={{fontSize:12,color:C.dim,letterSpacing:"0.1em",marginBottom:10}}>HISTORY</div>
+        <WeekNav weekStart={weekStart} onChange={setWeekStart}/>
+        {weekData.length===0?(
+          <div style={{fontSize:14,color:C.muted}}>No entries logged this week</div>
+        ):(
+          <div style={{display:"flex",flexDirection:"column",gap:6}}>
+            {[...weekData].reverse().map(d=>(
+              <div key={d.date} style={{display:"flex",alignItems:"center",justifyContent:"space-between",background:C.card,border:`1px solid ${confirmDelDate===d.date?C.red+"55":C.border}`,borderRadius:8,padding:"10px 12px"}}>
+                <span style={{fontSize:13,color:C.dim}}>{fmtDate(d.date)}</span>
+                {confirmDelDate===d.date?(
+                  <div style={{display:"flex",alignItems:"center",gap:8}}>
+                    <span style={{fontSize:12,color:C.red}}>Delete?</span>
+                    <button onClick={()=>setConfirmDelDate(null)} style={{background:"none",border:`1px solid ${C.border}`,borderRadius:6,color:C.dim,fontSize:12,padding:"4px 9px",cursor:"pointer"}}>Cancel</button>
+                    <button onClick={()=>{deleteBW(d.date);setConfirmDelDate(null);}} style={{background:C.red,border:"none",borderRadius:6,color:C.white,fontSize:12,fontWeight:600,padding:"4px 9px",cursor:"pointer"}}>Delete</button>
+                  </div>
+                ):(
+                  <div style={{display:"flex",alignItems:"center",gap:10}}>
+                    <span style={{fontSize:14,color:C.ink,fontWeight:600}}>{d.w}kg</span>
+                    <button onClick={()=>setConfirmDelDate(d.date)} style={{background:"none",border:"none",color:C.muted,fontSize:18,cursor:"pointer",lineHeight:1,padding:"0 2px"}}>×</button>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ── STATS TAB ─────────────────────────────────────────────────────────────────
+function buildProteinSeries(flogs,period,range){
+  if(period==="week"){
+    return Array.from({length:7}).map((_,i)=>{
+      const d=addDays(range.end,-6+i);
+      const meals=flogs[d]||[];
+      return{label:parseDateKey(d).toLocaleDateString("en-GB",{weekday:"short"}),protein:meals.reduce((s,m)=>s+m.protein,0),date:d};
+    });
+  }
+  const totalDays=Math.round((new Date(range.end)-new Date(range.start))/86400000)+1;
+  const bucketDays=Math.max(1,Math.round(totalDays/7));
+  const buckets=[];
+  let cursor=range.start;
+  while(cursor<=range.end){
+    const bucketEnd=addDays(cursor,bucketDays-1)>range.end?range.end:addDays(cursor,bucketDays-1);
+    let sum=0,days=0,d=cursor;
+    while(d<=bucketEnd){sum+=(flogs[d]||[]).reduce((s,m)=>s+m.protein,0);days++;d=addDays(d,1);}
+    buckets.push({label:fmtDate(cursor),protein:Math.round(sum/days),date:cursor});
+    cursor=addDays(bucketEnd,1);
+  }
+  return buckets;
+}
+
+const PERIODS=[["week","Week"],["month","Month"],["quarter","3 Months"],["half","6 Months"],["year","Year"]];
+
+function StatsTab({wlogs,flogs,prog,unit,bwlogs,proteinTarget}){
+  const [period,setPeriod]=useState("month");
+  const [progTab,setProgTab]=useState("gym");
+  const [selEx,setSelEx]=useState(null);
+  const [selCardio,setSelCardio]=useState(null);
+  const [selSessionType,setSelSessionType]=useState(null);
+  const [expandedLogKey,setExpandedLogKey]=useState(null);
+  const [pendingImport,setPendingImport]=useState(null);
+  const [importMsg,setImportMsg]=useState(null);
+  const [showBackup,setShowBackup]=useState(false);
+  const fileInputRef=useRef(null);
+  const range=periodRange(period);
+
+  const BACKUP_KEYS=["prog","wlogs","flogs","bwlogs","favourites","exerciseLibrary","proteinTarget","calorieTarget","unit","showRPE"];
+  function exportBackup(){
+    const data={};
+    BACKUP_KEYS.forEach(k=>{const v=lsGet(k);if(v!==null)data[k]=v;});
+    data._exportedAt=new Date().toISOString();
+    const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});
+    const url=URL.createObjectURL(blob);
+    const a=document.createElement("a");
+    a.href=url;a.download=`training-backup-${dateKey()}.json`;
+    document.body.appendChild(a);a.click();document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+  function handleImportFile(e){
+    const file=e.target.files?.[0];
+    if(!file)return;
+    setImportMsg(null);
+    const reader=new FileReader();
+    reader.onload=()=>{
+      try{setPendingImport(JSON.parse(reader.result));}
+      catch{setImportMsg("error");}
+    };
+    reader.readAsText(file);
+    e.target.value="";
+  }
+  function confirmImport(){
+    BACKUP_KEYS.forEach(k=>{if(pendingImport[k]!==undefined)lsSet(k,pendingImport[k]);});
+    window.location.reload();
+  }
+
+  function classifyLog(l){
+    if(l.dayType)return l.dayType;
+    const d=prog.find(p=>p.id===l.dayId);
+    return d?.type||TYPE_GYM;
+  }
+  function logDayName(l){
+    return l.dayName||prog.find(p=>p.id===l.dayId)?.name||(classifyLog(l)===TYPE_CARDIO?"Cardio session":"Workout");
+  }
+  function cardioFieldLabel(id){
+    for(const t of CARDIO_TEMPLATES){
+      const f=t.fields.find(ff=>ff.id===id);
+      if(f)return f.label;
+    }
+    return id;
+  }
+
+  const allEx=(()=>{
+    const seen={};
+    Object.values(wlogs).forEach(l=>{
+      Object.entries(l.data?.sets||{}).forEach(([exId,d])=>{
+        if(!d||!d.sets)return; // skip cardio flat-field logs
+        if(!seen[exId]){
+          seen[exId]={
+            name:d.name||prog.flatMap(p=>p.exercises||[]).find(e=>e.id===exId)?.name||"Exercise",
+            logType:d.logType||prog.flatMap(p=>p.exercises||[]).find(e=>e.id===exId)?.logType||"weight",
+          };
+        }
+      });
+    });
+    return Object.entries(seen).map(([id,v])=>({id,name:v.name,logType:v.logType}));
+  })();
+  const selExInfo=allEx.find(e=>e.id===selEx);
+  const selLogType=selExInfo?.logType||"weight";
+  function metricVal(s,logType){
+    if(logType==="weight")return parseFloat(s.w);
+    if(logType==="bodyweight")return parseFloat(s.r);
+    return parseFloat(s.dur);
+  }
+  function metricLabel(val,logType){
+    if(logType==="weight")return`${val}kg`;
+    if(logType==="bodyweight")return`${val} reps`;
+    return fmtDuration(val);
+  }
+  const exData=selEx?Object.values(wlogs).filter(l=>inRange(l.date,range.start,range.end)).map(l=>{
+    const d=l.data?.sets?.[selEx];if(!d?.sets)return null;
+    const logType=d.logType||selLogType;
+    const valid=d.sets.map(s=>({val:metricVal(s,logType),r:s.r})).filter(s=>s.val);
+    if(!valid.length)return null;
+    const top=valid.reduce((a,b)=>b.val>a.val?b:a);
+    return{date:l.date,max:top.val,reps:top.r||"",sets:valid.length};
+  }).filter(Boolean).sort((a,b)=>a.date.localeCompare(b.date)):[];
+  const exPB=exData.length?exData.reduce((a,b)=>b.max>a.max?b:a):null;
+
+  const cardioDays=(()=>{
+    const real=prog.filter(d=>d.type===TYPE_CARDIO);
+    const realIds=new Set(prog.map(d=>d.id));
+    const ghostMap={};
+    Object.values(wlogs).forEach(l=>{
+      if(realIds.has(l.dayId))return;
+      if(l.dayType!==TYPE_CARDIO)return;
+      if(!ghostMap[l.dayId]||l.date>ghostMap[l.dayId].date)ghostMap[l.dayId]=l;
+    });
+    const ghosts=Object.entries(ghostMap).map(([id,l])=>({
+      id,name:(l.dayName||"Run")+" (deleted)",type:TYPE_CARDIO,template:l.dayTemplate||"Custom",tag:l.dayTag||"",
+    }));
+    return[...real,...ghosts];
+  })();
+  const selCardioDay=cardioDays.find(d=>d.id===selCardio);
+  const cardioTmpl=selCardioDay?(CARDIO_TEMPLATES.find(t=>t.name===selCardioDay.template)||CARDIO_TEMPLATES[6]):null;
+  const cardioSessions=selCardio?Object.values(wlogs).filter(l=>l.dayId===selCardio&&inRange(l.date,range.start,range.end)).sort((a,b)=>a.date.localeCompare(b.date)):[];
+  const cardioHasPace=cardioTmpl?.calcPace;
+  const cardioPaceData=cardioHasPace?cardioSessions.map(l=>{
+    const dist=parseFloat(l.data?.sets?.distance),dur=parseFloat(l.data?.sets?.duration);
+    if(!dist||!dur)return null;
+    const distKm=unit==="mi"?dist*1.60934:dist;
+    return{date:l.date,distance:dist,duration:dur,paceVal:dur/distKm,paceStr:calcPaceStr(String(dist),String(dur),unit)};
+  }).filter(Boolean):[];
+  const cardioPB=cardioPaceData.length?{
+    fastest:cardioPaceData.reduce((a,b)=>b.paceVal<a.paceVal?b:a),
+    longest:cardioPaceData.reduce((a,b)=>b.distance>a.distance?b:a),
+  }:null;
+
+  const proteinSeries=buildProteinSeries(flogs,period,range);
+  const maxBar=Math.max(...proteinSeries.map(d=>d.protein),proteinTarget);
+
+  const bwData=Object.entries(bwlogs||{}).map(([d,val])=>({date:d,w:parseFloat(val)})).filter(d=>!isNaN(d.w)&&inRange(d.date,range.start,range.end)).sort((a,b)=>a.date.localeCompare(b.date));
+
+  // session counts within selected period
+  const wlogsInRange=Object.values(wlogs).filter(l=>inRange(l.date,range.start,range.end));
+  const cardioCount=wlogsInRange.filter(l=>{
+    if(l.dayType)return l.dayType===TYPE_CARDIO;
+    const d=prog.find(p=>p.id===l.dayId);
+    return d?.type===TYPE_CARDIO;
+  }).length;
+  const gymCount=wlogsInRange.length-cardioCount;
+
+  return(
+    <div className="fu">
+      <div style={{padding:"26px 18px 14px",borderBottom:`1px solid ${C.border}`}}>
+        <div style={{display:"flex",alignItems:"flex-start",justifyContent:"space-between"}}>
+          <div>
+            <div style={{fontSize:12,color:C.dim,letterSpacing:"0.15em"}}>OVERVIEW</div>
+            <div style={{fontFamily:"'Poppins',sans-serif",fontSize:36,fontWeight:700,color:C.ink,lineHeight:1}}>Stats</div>
+          </div>
+          <select value={period} onChange={e=>setPeriod(e.target.value)}
+            style={{marginTop:8,background:C.card,border:`1px solid ${C.border}`,borderRadius:7,color:C.ink,fontSize:13,fontWeight:600,padding:"8px 10px",cursor:"pointer",outline:"none"}}>
+            {PERIODS.map(([id,label])=><option key={id} value={id}>{label}</option>)}
+          </select>
+        </div>
+      </div>
+      <div style={{padding:"16px 18px 0"}}>
+        <div style={{fontSize:12,color:C.dim,letterSpacing:"0.1em",marginBottom:12}}>PROTEIN {period==="week"?"— LAST 7 DAYS":`— WEEKLY AVERAGE, LAST ${PERIODS.find(p=>p[0]===period)[1].toUpperCase()}`}</div>
+        <div style={{display:"flex",alignItems:"flex-end",gap:6,height:90,position:"relative"}}>
+          <div style={{position:"absolute",left:0,right:0,bottom:`${(proteinTarget/maxBar)*86}px`,borderTop:`1px dashed ${C.accent}44`,pointerEvents:"none"}}>
+            <span style={{fontSize:11,color:C.accent+"88",position:"absolute",right:0,top:-10}}>{proteinTarget}g</span>
+          </div>
+          {proteinSeries.map((d,i)=>{
+            const h=maxBar>0?(d.protein/maxBar)*80:0;const hit=d.protein>=proteinTarget;
+            return(
+              <div key={i} style={{flex:1,display:"flex",flexDirection:"column",alignItems:"center",gap:3,height:"100%",justifyContent:"flex-end"}}>
+                {d.protein>0&&<div style={{fontSize:11,color:hit?C.accent:C.mid}}>{d.protein}g</div>}
+                <div style={{width:"100%",height:Math.max(3,h),background:hit?C.accent:C.muted,borderRadius:"3px 3px 0 0",transition:"height 0.4s"}}/>
+                <div style={{fontSize:11,color:C.dim}}>{d.label}</div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      <div style={{padding:"16px 18px 0"}}>
+        <div style={{fontSize:12,color:C.dim,letterSpacing:"0.1em",marginBottom:10}}>SESSIONS — LAST {PERIODS.find(p=>p[0]===period)[1].toUpperCase()}</div>
+        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:8,marginBottom:14}}>
+          {[{label:"Gym sessions",val:gymCount,color:C.accent,type:TYPE_GYM},{label:"Cardio sessions",val:cardioCount,color:C.blue,type:TYPE_CARDIO},{label:"Days trained",val:new Set(wlogsInRange.map(l=>l.date)).size,color:C.ink,type:null}].map(({label,val,color,type})=>{
+            const clickable=type&&val>0;
+            const active=selSessionType===type;
+            return(
+              <button key={label} onClick={()=>{if(!clickable)return;setSelSessionType(active?null:type);setExpandedLogKey(null);}}
+                disabled={!clickable}
+                style={{background:active?"#f0f2f6":C.card,border:`1px solid ${active?color:C.border}`,borderRadius:8,padding:"12px 10px",textAlign:"left",cursor:clickable?"pointer":"default"}}>
+                <div style={{fontFamily:"'Poppins'",fontWeight:700,fontSize:30,color,lineHeight:1}}>{val}</div>
+                <div style={{fontSize:11,color:C.dim,marginTop:3}}>{label}</div>
+              </button>
+            );
+          })}
+        </div>
+        {selSessionType&&(()=>{
+          const logs=wlogsInRange.filter(l=>classifyLog(l)===selSessionType).sort((a,b)=>b.date.localeCompare(a.date));
+          return(
+            <div style={{marginBottom:14}}>
+              <div style={{fontSize:12,color:C.dim,marginBottom:8}}>{selSessionType===TYPE_CARDIO?"CARDIO":"GYM"} SESSIONS ({logs.length})</div>
+              <div style={{display:"flex",flexDirection:"column",gap:6}}>
+                {logs.map(l=>{
+                  const key=l.dayId+"__"+l.date;
+                  const expanded=expandedLogKey===key;
+                  const name=logDayName(l);
+                  return(
+                    <div key={key} style={{background:C.card,border:`1px solid ${C.border}`,borderRadius:8,overflow:"hidden"}}>
+                      <button onClick={()=>setExpandedLogKey(expanded?null:key)}
+                        style={{width:"100%",display:"flex",justifyContent:"space-between",alignItems:"center",background:"none",border:"none",padding:"11px 14px",cursor:"pointer",textAlign:"left"}}>
+                        <div>
+                          <div style={{fontSize:14,color:C.ink,fontWeight:600}}>{name}</div>
+                          <div style={{fontSize:12,color:C.dim,marginTop:1}}>{fmtDate(l.date)}</div>
+                        </div>
+                        <span style={{color:C.muted,fontSize:16,transform:expanded?"rotate(90deg)":"none",transition:"0.15s"}}>›</span>
+                      </button>
+                      {expanded&&(
+                        <div style={{padding:"0 14px 14px",display:"flex",flexDirection:"column",gap:8}}>
+                          {selSessionType===TYPE_CARDIO?(
+                            Object.entries(l.data?.sets||{}).filter(([,v])=>v).map(([id,v])=>(
+                              <div key={id} style={{display:"flex",justifyContent:"space-between",background:C.surface,borderRadius:6,padding:"8px 11px"}}>
+                                <span style={{fontSize:12,color:C.dim}}>{cardioFieldLabel(id)}</span>
+                                <span style={{fontSize:13,color:C.ink,fontWeight:600}}>{v}</span>
+                              </div>
+                            ))
+                          ):(
+                            Object.entries(l.data?.sets||{}).filter(([,d])=>d?.sets).map(([exId,d])=>{
+                              const logType=d.logType||"weight";
+                              const setLabels=d.sets.map(s=>{
+                                if(logType==="weight")return s.w?`${s.w}kg${s.r?` × ${s.r}`:""}`:null;
+                                if(logType==="bodyweight")return s.r?`${s.r} reps`:null;
+                                return s.dur?fmtDuration(s.dur):null;
+                              }).filter(Boolean);
+                              if(!setLabels.length)return null;
+                              return(
+                                <div key={exId} style={{background:C.surface,borderRadius:6,padding:"8px 11px"}}>
+                                  <div style={{fontSize:13,color:C.ink,fontWeight:600,marginBottom:5}}>{d.name||"Exercise"}</div>
+                                  <div style={{display:"flex",flexWrap:"wrap",gap:5}}>
+                                    {setLabels.map((s,si)=><span key={si} style={{fontSize:12,background:C.card,border:`1px solid ${C.border}`,borderRadius:5,padding:"3px 7px",color:C.mid}}>{s}</span>)}
+                                  </div>
+                                </div>
+                              );
+                            })
+                          )}
+                          {l.data?.note&&(
+                            <div style={{background:C.surface,borderRadius:6,padding:"8px 11px"}}>
+                              <div style={{fontSize:11,color:C.dim,marginBottom:3}}>NOTES</div>
+                              <div style={{fontSize:13,color:C.text}}>{l.data.note}</div>
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })()}
+      </div>
+
+      <div style={{padding:"0 18px 24px"}}>
+        <div style={{fontSize:12,color:C.dim,letterSpacing:"0.1em",marginBottom:10}}>BODYWEIGHT</div>
+        {bwData.length===0?(
+          <div style={{fontSize:14,color:C.muted}}>No bodyweight logged in this period — log it from the Weight tab</div>
+        ):(()=>{
+          const maxW=Math.max(...bwData.map(d=>d.w));const minW=Math.min(...bwData.map(d=>d.w));
+          const diff=bwData.length>1?bwData[bwData.length-1].w-bwData[0].w:0;
+          return(
+            <div style={{background:C.card,border:`1px solid ${C.border}`,borderRadius:10,padding:14}}>
+              <div style={{display:"flex",justifyContent:"space-between",marginBottom:14}}>
+                <div>
+                  <div style={{fontFamily:"'Poppins'",fontSize:32,fontWeight:700,color:C.ink,lineHeight:1}}>{bwData[bwData.length-1].w}kg</div>
+                  <div style={{fontSize:12,color:C.dim,marginTop:2}}>latest in period</div>
+                </div>
+                {bwData.length>1&&(
+                  <div style={{textAlign:"right"}}>
+                    <div style={{fontFamily:"'Poppins'",fontWeight:700,fontSize:26,color:diff>0?C.red:(diff<0?C.green:C.dim),lineHeight:1}}>{diff>0?"+":""}{diff.toFixed(1)}kg</div>
+                    <div style={{fontSize:12,color:C.dim,marginTop:2}}>change this period</div>
+                  </div>
+                )}
+              </div>
+              <div style={{display:"flex",alignItems:"flex-end",gap:4,height:60}}>
+                {bwData.map((d,i)=>{
+                  const h=maxW===minW?40:8+((d.w-minW)/(maxW-minW))*52;const isLast=i===bwData.length-1;
+                  return(
+                    <div key={i} style={{flex:1,display:"flex",flexDirection:"column",alignItems:"center",gap:2}}>
+                      {isLast&&<div style={{fontSize:11,color:C.blue}}>{d.w}kg</div>}
+                      <div style={{width:"100%",height:h,background:isLast?C.blue:C.muted,borderRadius:"2px 2px 0 0"}}/>
+                    </div>
+                  );
+                })}
+              </div>
+              <div style={{display:"flex",justifyContent:"space-between",marginTop:6,fontSize:11,color:C.dim}}>
+                <span>{fmtDate(bwData[0].date)}</span><span>{fmtDate(bwData[bwData.length-1].date)}</span>
+              </div>
+            </div>
+          );
+        })()}
+      </div>
+
+      <div style={{padding:"0 18px 24px"}}>
+        <div style={{fontSize:12,color:C.dim,letterSpacing:"0.1em",marginBottom:10}}>EXERCISE PROGRESS</div>
+        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8,marginBottom:14}}>
+          {[["gym","⬡ GYM"],["run","◈ RUNNING / CARDIO"]].map(([id,label])=>(
+            <button key={id} onClick={()=>setProgTab(id)}
+              style={{padding:"11px",background:progTab===id?(id==="run"?"#e8effe":"#e6f6ec"):C.card,border:`1px solid ${progTab===id?(id==="run"?C.blue:C.accent):C.border}`,borderRadius:8,color:progTab===id?(id==="run"?C.blue:C.accent):C.dim,fontSize:13,fontWeight:600,cursor:"pointer",letterSpacing:"0.04em"}}>
+              {label}
+            </button>
+          ))}
+        </div>
+
+        {progTab==="gym"&&(
+          allEx.length===0?(
+            <div style={{fontSize:14,color:C.muted}}>Log gym sessions to see lift progress</div>
+          ):(
+            <div>
+              <div style={{display:"flex",flexWrap:"wrap",gap:5,marginBottom:14}}>
+                {allEx.map(e=>(
+                  <button key={e.id} onClick={()=>setSelEx(selEx===e.id?null:e.id)}
+                    style={{background:selEx===e.id?C.accent:C.card,color:selEx===e.id?C.ink:C.dim,border:`1px solid ${selEx===e.id?C.accent:C.border}`,borderRadius:20,fontSize:12,padding:"5px 10px",cursor:"pointer",letterSpacing:"0.05em",transition:"all 0.15s"}}>
+                    {e.name.length>20?e.name.slice(0,20)+"…":e.name}
+                  </button>
+                ))}
+              </div>
+              {selEx&&exData.length>0&&(()=>{
+                const maxW=Math.max(...exData.map(d=>d.max));const minW=Math.min(...exData.map(d=>d.max));
+                const diff=exData[exData.length-1].max-exData[0].max;
+                const latest=exData[exData.length-1];
+                const diffLabel=selLogType==="weight"?`${diff>=0?"+":""}${diff.toFixed(1)}kg`
+                  :selLogType==="bodyweight"?`${diff>=0?"+":""}${Math.round(diff)} reps`
+                  :`${diff>=0?"+":""}${Math.round(diff)}s`;
+                const topLabel=selLogType==="weight"?"latest top set":selLogType==="bodyweight"?"latest best set":"latest best hold";
+                return(
+                  <div style={{background:C.card,border:`1px solid ${C.border}`,borderRadius:10,padding:14}}>
+                    <div style={{display:"flex",justifyContent:"space-between",marginBottom:10}}>
+                      <div>
+                        <div style={{fontFamily:"'Poppins'",fontSize:32,fontWeight:700,color:C.ink,lineHeight:1}}>{metricLabel(latest.max,selLogType)}</div>
+                        <div style={{fontSize:12,color:C.dim,marginTop:2}}>{topLabel}{selLogType==="weight"&&latest.reps?` · ${latest.reps} reps`:""}</div>
+                      </div>
+                      <div style={{textAlign:"right"}}>
+                        <div style={{fontFamily:"'Poppins'",fontWeight:700,fontSize:26,color:diff>=0?C.green:C.red,lineHeight:1}}>{diffLabel}</div>
+                        <div style={{fontSize:12,color:C.dim,marginTop:2}}>vs first session</div>
+                      </div>
+                    </div>
+                    {exPB&&(
+                      <div style={{display:"flex",alignItems:"center",gap:6,background:"#fff8ea",border:`1px solid ${C.warn}33`,borderRadius:7,padding:"7px 10px",marginBottom:12}}>
+                        <span style={{fontSize:14}}>🏆</span>
+                        <span style={{fontSize:12,color:C.mid}}>PB: <b style={{color:C.ink}}>{metricLabel(exPB.max,selLogType)}{selLogType==="weight"&&exPB.reps?` × ${exPB.reps}`:""}</b> on {fmtDate(exPB.date)}</span>
+                      </div>
+                    )}
+                    <div style={{display:"flex",alignItems:"flex-end",gap:4,height:60}}>
+                      {exData.map((d,i)=>{
+                        const h=maxW===minW?40:8+((d.max-minW)/(maxW-minW))*52;const isLast=i===exData.length-1;
+                        return(
+                          <div key={i} style={{flex:1,display:"flex",flexDirection:"column",alignItems:"center",gap:2}}>
+                            {isLast&&<div style={{fontSize:11,color:C.accent}}>{metricLabel(d.max,selLogType)}</div>}
+                            <div style={{width:"100%",height:h,background:isLast?C.accent:C.muted,borderRadius:"2px 2px 0 0"}}/>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <div style={{display:"flex",justifyContent:"space-between",marginTop:6,fontSize:11,color:C.dim}}>
+                      <span>{fmtDate(exData[0].date)}</span><span>{fmtDate(exData[exData.length-1].date)}</span>
+                    </div>
+                  </div>
+                );
+              })()}
+              {selEx&&exData.length===0&&<div style={{fontSize:14,color:C.muted}}>No data logged yet</div>}
+            </div>
+          )
+        )}
+
+        {progTab==="run"&&(
+          cardioDays.length===0?(
+            <div style={{fontSize:14,color:C.muted}}>Add a cardio day to see running/cardio progress</div>
+          ):(
+            <div>
+              <div style={{display:"flex",flexWrap:"wrap",gap:5,marginBottom:14}}>
+                {cardioDays.map(d=>(
+                  <button key={d.id} onClick={()=>setSelCardio(selCardio===d.id?null:d.id)}
+                    style={{background:selCardio===d.id?C.blue:C.card,color:selCardio===d.id?C.white:C.dim,border:`1px solid ${selCardio===d.id?C.blue:C.border}`,borderRadius:20,fontSize:12,padding:"5px 10px",cursor:"pointer",letterSpacing:"0.05em",transition:"all 0.15s"}}>
+                    {d.name.length>20?d.name.slice(0,20)+"…":d.name}
+                  </button>
+                ))}
+              </div>
+
+              {selCardio&&cardioSessions.length===0&&<div style={{fontSize:14,color:C.muted}}>No sessions logged yet for this day</div>}
+
+              {selCardio&&cardioSessions.length>0&&cardioHasPace&&cardioPaceData.length>0&&(()=>{
+                const maxP=Math.max(...cardioPaceData.map(d=>d.paceVal));const minP=Math.min(...cardioPaceData.map(d=>d.paceVal));
+                const latest=cardioPaceData[cardioPaceData.length-1];
+                const distUnit=unit==="mi"?"mi":"km";
+                return(
+                  <div style={{background:C.card,border:`1px solid ${C.border}`,borderRadius:10,padding:14}}>
+                    <div style={{display:"flex",justifyContent:"space-between",marginBottom:10}}>
+                      <div>
+                        <div style={{fontFamily:"'Poppins'",fontSize:28,fontWeight:700,color:C.ink,lineHeight:1}}>{latest.paceStr}</div>
+                        <div style={{fontSize:12,color:C.dim,marginTop:2}}>latest pace · {latest.distance}{distUnit}</div>
+                      </div>
+                    </div>
+                    <div style={{display:"flex",alignItems:"center",gap:6,background:"#fff8ea",border:`1px solid ${C.warn}33`,borderRadius:7,padding:"7px 10px",marginBottom:12}}>
+                      <span style={{fontSize:14}}>🏆</span>
+                      <span style={{fontSize:12,color:C.mid}}>Fastest: <b style={{color:C.ink}}>{cardioPB.fastest.paceStr}</b> ({fmtDate(cardioPB.fastest.date)}) · Longest: <b style={{color:C.ink}}>{cardioPB.longest.distance}{distUnit}</b> ({fmtDate(cardioPB.longest.date)})</span>
+                    </div>
+                    <div style={{fontSize:11,color:C.dim,marginBottom:4}}>PACE TREND (taller = faster)</div>
+                    <div style={{display:"flex",alignItems:"flex-end",gap:4,height:60}}>
+                      {cardioPaceData.map((d,i)=>{
+                        const h=maxP===minP?40:8+((maxP-d.paceVal)/(maxP-minP))*52;const isLast=i===cardioPaceData.length-1;
+                        return(
+                          <div key={i} style={{flex:1,display:"flex",flexDirection:"column",alignItems:"center",gap:2}}>
+                            <div style={{width:"100%",height:h,background:isLast?C.blue:C.muted,borderRadius:"2px 2px 0 0"}}/>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <div style={{display:"flex",justifyContent:"space-between",marginTop:6,fontSize:11,color:C.dim}}>
+                      <span>{fmtDate(cardioPaceData[0].date)}</span><span>{fmtDate(cardioPaceData[cardioPaceData.length-1].date)}</span>
+                    </div>
+                  </div>
+                );
+              })()}
+
+              {selCardio&&cardioSessions.length>0&&!cardioHasPace&&(
+                <div>
+                  <div style={{fontSize:12,color:C.dim,marginBottom:8}}>{cardioSessions.length} session{cardioSessions.length===1?"":"s"} logged — recent history:</div>
+                  <div style={{display:"flex",flexDirection:"column",gap:6}}>
+                    {cardioSessions.slice(-6).reverse().map((l,i)=>{
+                      const parts=(cardioTmpl?.fields||[]).map(f=>{const v=l.data?.sets?.[f.id];return v?`${f.label}: ${v}`:null;}).filter(Boolean);
+                      return(
+                        <div key={i} style={{background:C.card,border:`1px solid ${C.border}`,borderRadius:8,padding:"10px 12px"}}>
+                          <div style={{fontSize:11,color:C.dim,marginBottom:3}}>{fmtDate(l.date)}</div>
+                          <div style={{fontSize:13,color:C.text}}>{parts.join(" · ")||"No details logged"}</div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+            </div>
+          )
+        )}
+      </div>
+
+      <div style={{padding:"0 18px 32px"}}>
+        <button onClick={()=>setShowBackup(o=>!o)} style={{width:"100%",display:"flex",justifyContent:"space-between",alignItems:"center",background:"none",border:"none",padding:"8px 0",cursor:"pointer"}}>
+          <span style={{fontSize:12,color:C.dim,letterSpacing:"0.1em"}}>BACKUP & RESTORE</span>
+          <span style={{color:C.muted,fontSize:16,transform:showBackup?"rotate(90deg)":"none",transition:"0.15s"}}>›</span>
+        </button>
+        {showBackup&&(
+          <div style={{background:C.card,border:`1px solid ${C.border}`,borderRadius:10,padding:14,marginTop:8}}>
+            <div style={{fontSize:13,color:C.mid,marginBottom:12}}>Your data only lives on this device. Export a backup now and then so it's never at risk, or use it to move everything to a new phone.</div>
+            <div style={{display:"flex",gap:8}}>
+              <button onClick={exportBackup} style={{flex:1,background:C.accent,border:"none",borderRadius:8,color:C.ink,fontSize:13,fontWeight:700,padding:11,cursor:"pointer"}}>⬇ Export backup</button>
+              <button onClick={()=>fileInputRef.current?.click()} style={{flex:1,background:"none",border:`1px solid ${C.border}`,borderRadius:8,color:C.dim,fontSize:13,fontWeight:600,padding:11,cursor:"pointer"}}>⬆ Restore</button>
+            </div>
+            <input ref={fileInputRef} type="file" accept="application/json" onChange={handleImportFile} style={{display:"none"}}/>
+            {importMsg==="error"&&<div style={{marginTop:10,fontSize:12,color:C.red}}>That file couldn't be read — make sure it's a backup exported from this app.</div>}
+            {pendingImport&&(
+              <div style={{marginTop:12,background:"#fff8ea",border:`1px solid ${C.warn}44`,borderRadius:8,padding:"11px 12px"}}>
+                <div style={{fontSize:13,color:C.mid,marginBottom:9}}>This will replace all your current data with this backup{pendingImport._exportedAt?` (from ${fmtDate(pendingImport._exportedAt.slice(0,10))})`:""}. This can't be undone.</div>
+                <div style={{display:"flex",gap:7}}>
+                  <button onClick={()=>setPendingImport(null)} style={{flex:1,background:"none",border:`1px solid ${C.border}`,borderRadius:7,color:C.dim,fontSize:13,padding:9,cursor:"pointer"}}>Cancel</button>
+                  <button onClick={confirmImport} style={{flex:1,background:C.warn,border:"none",borderRadius:7,color:C.white,fontSize:13,fontWeight:700,padding:9,cursor:"pointer"}}>Restore</button>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+</script>
+</body>
+</html>
